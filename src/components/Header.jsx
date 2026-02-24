@@ -31,7 +31,7 @@ const Header = () => {
 
                     {/* Mobile Menu Toggle */}
                     <button
-                        className="lg:hidden text-industrial-dark dark:text-industrial-light relative z-50 p-2"
+                        className="xl:hidden text-industrial-dark dark:text-industrial-light relative z-50 p-2"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Toggle menu"
                     >
@@ -39,7 +39,7 @@ const Header = () => {
                     </button>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden lg:flex gap-8 text-sm font-medium tracking-wide uppercase relative">
+                    <nav className="hidden xl:flex gap-6 2xl:gap-8 text-sm font-medium tracking-wide uppercase relative">
                         {['/', '/products', '/designstudio', '/catalogues', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
                             const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : (path === '/catalogues' ? 'Catalogues' : path.substring(1)))));
                             const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
@@ -67,7 +67,7 @@ const Header = () => {
 
             {/* Mobile Nav Overlay */}
             <div
-                className={`lg:hidden fixed inset-0 z-40 bg-industrial-light/95 dark:bg-industrial-dark/95 backdrop-blur-xl transition-transform duration-MAX ease-industrial ${isOpen ? 'translate-y-0' : '-translate-y-full'
+                className={`xl:hidden fixed inset-0 z-40 bg-industrial-light/95 dark:bg-industrial-dark/95 backdrop-blur-xl transition-transform duration-MAX ease-industrial ${isOpen ? 'translate-y-0' : '-translate-y-full'
                     }`}
                 style={{ paddingTop: '80px' }}
             >
