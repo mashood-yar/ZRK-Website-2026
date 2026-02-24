@@ -30,25 +30,22 @@ const CinematicSlider = () => {
     }, []);
 
     return (
-        <div className="relative w-full aspect-hero overflow-hidden rounded filter grayscale-[15%]">
+        <div className="relative w-full overflow-hidden rounded filter grayscale-[15%] grid items-center justify-center bg-transparent">
             <AnimatePresence>
                 <motion.div
                     key={current}
-                    initial={{ opacity: 0, scale: 1 }}
-                    animate={{ opacity: 1, scale: 1.1 }}
-                    exit={{ opacity: 0, scale: 1.15 }}
-                    transition={{
-                        opacity: { duration: 1.5, ease: "easeInOut" },
-                        scale: { duration: 9, ease: "linear" }
-                    }}
-                    className="absolute inset-0 w-full h-full origin-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    className="col-start-1 row-start-1 w-full flex justify-center"
                 >
                     <picture>
                         <source media="(max-width: 768px)" srcSet={slides[current].mobile} />
                         <img
                             src={slides[current].desktop}
                             alt={`ZRK Architectural Banner ${current + 1}`}
-                            className="w-full h-full object-cover"
+                            className="w-auto h-auto max-w-full block mx-auto"
                             loading={current === 0 ? "eager" : "lazy"}
                             fetchpriority={current === 0 ? "high" : "auto"}
                         />
