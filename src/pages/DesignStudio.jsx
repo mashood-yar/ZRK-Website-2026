@@ -69,6 +69,39 @@ export default function DesignStudio() {
                 </MotionWrapper>
 
             </section>
+
+            {/* Gallery Section */}
+            <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-tundora/20">
+                <MotionWrapper yOffset={30}>
+                    <h2 className="font-sans font-bold text-4xl md:text-5xl text-industrial-dark dark:text-industrial-light mb-16 uppercase tracking-tight">
+                        <StaggeredText text="Studio" /> <br />
+                        <StaggeredText text="Gallery." className="text-zrk-gold" delayOffset={0.2} />
+                    </h2>
+                </MotionWrapper>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {Array.from({ length: 19 }, (_, i) => 51 + i).map((num, idx) => (
+                        <MotionWrapper key={num} delay={0.05 * (idx % 3)} yOffset={30}>
+                            <div className="w-full aspect-square rounded-xl overflow-hidden shadow-lg relative group border border-tundora/10 dark:border-zinc-800">
+                                <div className="transform group-hover:scale-105 transition-transform duration-MAX ease-industrial h-full">
+                                    <ImageContainer
+                                        src={`/assets/images/designstudio/${num}.webp`}
+                                        alt={`ZRK Design Studio Visual ${num}`}
+                                        aspectType="square"
+                                        parallaxOffset={15}
+                                    />
+                                </div>
+                                <div className="absolute inset-0 bg-industrial-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                    <span className="text-industrial-light font-sans uppercase tracking-widest text-sm font-bold bg-tundora/50 backdrop-blur-md px-4 py-2 rounded">
+                                        Perspective {idx + 1}
+                                    </span>
+                                </div>
+                            </div>
+                        </MotionWrapper>
+                    ))}
+                </div>
+            </section>
+
         </div>
     );
 }
