@@ -6,10 +6,30 @@ import { ArrowDown } from 'lucide-react';
 
 const Products = () => {
     const products = [
-        { id: 1, name: "UV Lux", src: "/assets/images/dark-walnut.png", desc: "High Gloss Elite finishes.", type: "Laminated Boards", spec: "Premium" },
-        { id: 2, name: "Lamination Series", src: "/assets/images/matte-charcoal.png", desc: "Textured Laminates & Melamine Laminated boards.", type: "Laminated Boards", spec: "Standard" },
-        { id: 3, name: "MDF", src: "/assets/images/raw-mdf.png", desc: "High density structural core. The foundation of excellence.", type: "Raw Material", spec: "E1 Standard" },
-        { id: 4, name: "Particleboard", src: "/assets/images/scandinavian-oak.png", desc: "Durable and versatile core material.", type: "Raw Material", spec: "Standard" }
+        { id: 1, name: "Classic 7001", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207001.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 2, name: "Classic 7002", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207002.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 3, name: "Classic 7017", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207017.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 4, name: "Classic 7018", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207018.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 5, name: "Classic 7021", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207021.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 6, name: "Classic 7022", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207022.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 7, name: "Classic 7024", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207024.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 8, name: "Classic 7025", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207025.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 9, name: "Classic 7026", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207026.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 10, name: "Classic 7027", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207027.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 11, name: "Classic 7028", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207028.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 12, name: "Classic 7029", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207029.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 13, name: "Classic 7030", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207030.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 14, name: "Classic 7031", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207031.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 15, name: "Classic 7032", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207032.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 16, name: "Classic 7033", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207033.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 17, name: "Classic 7034", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207034.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 18, name: "Classic 7035", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207035.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 19, name: "Classic 7036", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Classic%20%207036.png", type: "UV Lux", spec: "Classic", desc: "High Gloss Series" },
+        { id: 20, name: "Glitter 4001", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Glitter%204001.png", type: "UV Lux", spec: "Glitter", desc: "Premium Finish" },
+        { id: 21, name: "Glitter 4002", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Glitter%204002.png", type: "UV Lux", spec: "Glitter", desc: "Premium Finish" },
+        { id: 22, name: "Glitter 4003", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Glitter%204003.png", type: "UV Lux", spec: "Glitter", desc: "Premium Finish" },
+        { id: 23, name: "Glitter 4004", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Glitter%204004.png", type: "UV Lux", spec: "Glitter", desc: "Premium Finish" },
+        { id: 24, name: "Glitter 4005", src: "https://zrkgroup.com/public/admin/images/product/UV%20Lux%20Glitter%204005.png", type: "UV Lux", spec: "Glitter", desc: "Premium Finish" }
     ];
 
     return (
@@ -30,10 +50,10 @@ const Products = () => {
 
             {/* Grid */}
             <section className="px-6 py-24 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {products.map((product, idx) => (
-                        <MotionWrapper key={product.id} delay={0.1 * idx} yOffset={30}>
-                            <div className="group structural-panel relative cursor-pointer overflow-hidden flex flex-col h-full">
+                        <MotionWrapper key={product.id} delay={0.05 * (idx % 4)} yOffset={30}>
+                            <div className="group structural-panel relative cursor-pointer overflow-hidden flex flex-col h-full rounded-lg border border-tundora/10 dark:border-zinc-800 bg-white/5 dark:bg-black/20 p-4">
 
                                 {/* Blueprint data reveal - Progressive Disclosure (Hick's Law) */}
                                 <div className="absolute top-8 left-8 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
