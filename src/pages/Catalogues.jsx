@@ -41,19 +41,21 @@ export default function Catalogues() {
                     {catalogues.map((cat, i) => (
                         <motion.div
                             key={i}
-                            className="group bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 p-6 rounded-xl hover:border-zrk-gold transition-colors duration-300 flex items-center justify-between cursor-pointer shadow-sm hover:shadow-lg"
+                            className="group structural-panel flex items-center justify-between cursor-pointer"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05 }}
                         >
-                            <div className="flex items-center gap-4">
-                                <div className="p-3 bg-gray-50 dark:bg-zinc-800 rounded text-zrk-gold group-hover:bg-zrk-gold group-hover:text-white transition-colors">
-                                    <FileText className="w-6 h-6" />
+                            <div className="flex items-center gap-6">
+                                <div className="p-4 bg-gray-50 dark:bg-zinc-800 rounded text-zrk-gold group-hover:bg-zrk-gold group-hover:text-white transition-colors duration-300">
+                                    <FileText className="w-8 h-8" />
                                 </div>
-                                <h3 className="font-sans font-bold text-zrk-black dark:text-white group-hover:text-zrk-black dark:group-hover:text-zrk-gold transition-colors">{cat}</h3>
+                                <h3 className="font-sans font-bold text-lg text-zrk-black dark:text-white group-hover:text-zrk-gold transition-colors duration-300">{cat}</h3>
                             </div>
-                            <Download className="w-5 h-5 text-gray-400 group-hover:text-zrk-gold transition-colors" />
+                            <div className="tap-target opacity-50 group-hover:opacity-100 group-hover:text-zrk-gold transition-all duration-300">
+                                <Download className="w-6 h-6" />
+                            </div>
                         </motion.div>
                     ))}
                 </div>

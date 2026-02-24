@@ -21,6 +21,12 @@ export default {
         sans: ['Montserrat', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
+      spacing: {
+        '18': '4.5rem', /* 72px */
+        '22': '5.5rem', /* 88px */
+        '26': '6.5rem', /* 104px */
+        '30': '7.5rem', /* 120px */
+      },
       aspectRatio: {
         'hero': '1.85 / 1',
         'product': '4 / 3',

@@ -27,13 +27,18 @@ const About = () => {
 
                     <MotionWrapper delay={0.4} yOffset={30}>
                         <div className="pt-8 lg:pt-24 border-t border-tundora/20">
-                            <h2 className="text-sm font-sans uppercase tracking-widest text-zrk-gold mb-6">Our Legacy</h2>
-                            <p className="text-xl md:text-2xl font-medium text-industrial-dark dark:text-industrial-light leading-relaxed mb-8">
-                                Founded in 1992, the ZRK Group stands as a prominent family-owned enterprise specializing in the manufacturing of MDF, particleboard, laminated boards and door skins.
-                            </p>
-                            <p className="text-tundora dark:text-gray-400">
-                                A monumental stride was achieved in 2008 with the inauguration of a state-of-the-art MDF Manufacturing plant, solidifying the company's position as an industry leader. The commitment to technological advancement and innovation remained unwavering.
-                            </p>
+                            <h2 className="text-sm font-sans uppercase tracking-widest text-zrk-gold mb-8">Our Legacy</h2>
+                            <div className="space-y-6">
+                                <p className="text-xl md:text-2xl font-medium text-industrial-dark dark:text-industrial-light leading-relaxed">
+                                    Founded in 1992, the ZRK Group stands as a prominent family-owned enterprise specializing in the manufacturing of MDF, particleboard, laminated boards and door skins.
+                                </p>
+                                <p className="text-tundora dark:text-gray-400 leading-relaxed text-lg max-w-xl">
+                                    A monumental stride was achieved in 2008 with the inauguration of a state-of-the-art MDF Manufacturing plant, solidifying the company's position as an industry leader.
+                                </p>
+                                <p className="text-tundora dark:text-gray-400 leading-relaxed text-lg max-w-xl">
+                                    The commitment to technological advancement and innovation remained unwavering, ensuring our capacity to deliver superior products globally.
+                                </p>
+                            </div>
                         </div>
                     </MotionWrapper>
                 </div>
@@ -41,26 +46,31 @@ const About = () => {
 
             <section className="px-6 py-24 bg-industrial-dark text-industrial-light">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                    <MotionWrapper delay={0} yOffset={20}>
-                        <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-4 relative inline-block">
-                            <span className="relative z-10"><StaggeredText text="M1" /></span>
-                            <div className="absolute inset-0 bg-industrial-light/5 -z-0 transform -translate-x-4 translate-y-4"></div>
+                    <MotionWrapper delay={0}>
+                        <div className="structural-panel bg-zinc-900 border-zinc-800 text-center h-full flex flex-col justify-center transform hover:-translate-y-2 transition-transform duration-500">
+                            <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-6 relative inline-block">
+                                <span className="relative z-10"><StaggeredText text="M1" /></span>
+                            </div>
+                            <div className="text-sm uppercase tracking-widest font-bold text-gray-300">Square Meters Daily</div>
                         </div>
-                        <div className="text-sm uppercase tracking-widest font-bold">Square Meters Daily</div>
                     </MotionWrapper>
-                    <MotionWrapper delay={0.2} yOffset={20}>
-                        <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-4 relative inline-block">
-                            <span className="relative z-10"><StaggeredText text="E1" delayOffset={0.2} /></span>
-                            <div className="absolute inset-0 bg-industrial-light/5 -z-0 transform -translate-x-4 translate-y-4"></div>
+
+                    <MotionWrapper delay={0.2}>
+                        <div className="structural-panel bg-zinc-900 border-zinc-800 text-center h-full flex flex-col justify-center transform hover:-translate-y-2 transition-transform duration-500">
+                            <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-6 relative inline-block">
+                                <span className="relative z-10"><StaggeredText text="E1" delayOffset={0.2} /></span>
+                            </div>
+                            <div className="text-sm uppercase tracking-widest font-bold text-gray-300">Emission Standard</div>
                         </div>
-                        <div className="text-sm uppercase tracking-widest font-bold">Emission Standard</div>
                     </MotionWrapper>
-                    <MotionWrapper delay={0.4} yOffset={20}>
-                        <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-4 relative inline-block">
-                            <span className="relative z-10"><StaggeredText text="30+" delayOffset={0.4} /></span>
-                            <div className="absolute inset-0 bg-industrial-light/5 -z-0 transform -translate-x-4 translate-y-4"></div>
+
+                    <MotionWrapper delay={0.4}>
+                        <div className="structural-panel bg-zinc-900 border-zinc-800 text-center h-full flex flex-col justify-center transform hover:-translate-y-2 transition-transform duration-500">
+                            <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-6 relative inline-block">
+                                <span className="relative z-10"><StaggeredText text="30+" delayOffset={0.4} /></span>
+                            </div>
+                            <div className="text-sm uppercase tracking-widest font-bold text-gray-300">Years of Excellence</div>
                         </div>
-                        <div className="text-sm uppercase tracking-widest font-bold">Years of Excellence</div>
                     </MotionWrapper>
                 </div>
             </section>

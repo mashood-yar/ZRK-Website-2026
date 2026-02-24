@@ -32,3 +32,25 @@
     @apply font-sans tracking-tight;
   }
 }
+
+@layer components {
+
+  /* 44px Minimum Tap Target - Fitt's Law */
+  .tap-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Generalized button classes - Law of Similarity & Doherty Threshold */
+  .btn-primary {
+    @apply bg-zrk-gold text-white font-sans font-bold uppercase tracking-widest px-8 py-4 transition-all duration-300 hover:bg-zrk-black dark:hover:bg-white dark:hover:text-zrk-black border border-transparent tap-target relative overflow-hidden;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-zrk-black dark:text-white font-sans font-bold uppercase tracking-widest px-8 py-4 transition-all duration-300 border border-zrk-black/20 dark:border-white/20 hover:border-zrk-gold hover:text-zrk-gold tap-target;
+  }
+
+  /* Structural Panels - Common Region & Hick's */
+  .structural-panel {
+    @apply bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 p-8 shadow-sm hover:shadow-lg transition-shadow duration-300;
+  }
+}

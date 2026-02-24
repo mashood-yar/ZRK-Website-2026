@@ -30,41 +30,40 @@ const Products = () => {
 
             {/* Grid */}
             <section className="px-6 py-24 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {products.map((product, idx) => (
                         <MotionWrapper key={product.id} delay={0.1 * idx} yOffset={30}>
-                            <div className="group cursor-pointer relative">
+                            <div className="group structural-panel relative cursor-pointer overflow-hidden flex flex-col h-full">
 
-                                {/* Architectural Blueprint Hover Overlay */}
-                                <div className="absolute inset-0 border border-zrk-gold/0 group-hover:border-zrk-gold/100 z-20 pointer-events-none transition-colors duration-MAX ease-industrial scale-95 group-hover:scale-100 opacity-0 group-hover:opacity-100" />
-
-                                {/* Blueprint data reveal */}
-                                <div className="absolute top-4 left-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-MAX ease-industrial pointer-events-none">
+                                {/* Blueprint data reveal - Progressive Disclosure (Hick's Law) */}
+                                <div className="absolute top-8 left-8 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                                     <p className="text-[10px] font-body uppercase tracking-widest text-zrk-gold bg-industrial-dark px-2 py-1">Density: {product.spec}</p>
                                 </div>
 
-                                <div className="overflow-hidden mb-6 relative">
-                                    <div className="transform group-hover:scale-[1.03] transition-transform duration-MAX ease-industrial group-hover:grayscale">
+                                <div className="overflow-hidden mb-8 relative rounded filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-500">
+                                    <div className="transform group-hover:scale-105 transition-transform duration-MAX ease-industrial">
                                         <ImageContainer
                                             src={product.src}
                                             alt={product.name}
                                             aspectType="product"
-                                            parallaxOffset={25}
+                                            parallaxOffset={15}
                                         />
                                     </div>
-                                    <div className="absolute top-4 right-4 bg-industrial-dark text-industrial-light px-4 py-1 text-xs font-sans uppercase tracking-widest z-10">
+                                    <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/90 text-zrk-black dark:text-white px-3 py-1 text-[10px] font-sans uppercase tracking-widest z-10 font-bold backdrop-blur-sm shadow-sm">
                                         {product.type}
                                     </div>
                                 </div>
 
-                                <div className="flex justify-between items-start border-b border-tundora/20 pb-4">
+                                <div className="flex justify-between items-end flex-grow">
                                     <div>
                                         <h3 className="text-2xl font-sans uppercase font-bold tracking-tight mb-2 text-industrial-dark dark:text-industrial-light group-hover:text-zrk-gold transition-colors duration-300">
                                             {product.name}
                                         </h3>
-                                        <p className="text-sm text-tundora dark:text-gray-400 max-w-sm">{product.desc}</p>
+                                        <p className="text-sm text-tundora dark:text-gray-400 max-w-sm line-clamp-2">{product.desc}</p>
                                     </div>
-                                    <ArrowDown size={24} className="text-industrial-dark dark:text-industrial-light opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-MAX ease-industrial" />
+                                    <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-zinc-800 flex items-center justify-center group-hover:border-zrk-gold group-hover:bg-zrk-gold group-hover:text-white transition-all duration-300 text-tundora ml-4 shrink-0">
+                                        <ArrowDown size={18} className="transform -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                                    </div>
                                 </div>
                             </div>
                         </MotionWrapper>
@@ -94,9 +93,7 @@ const Products = () => {
                         <p className="text-tundora dark:text-gray-400 mb-8 max-w-md">
                             Request the official ZRK Specifier Box. Includes physical swatches of our entire 2026 collection, engineered technical sheets, and certification documents.
                         </p>
-                        <button
-                            className="inline-flex items-center gap-4 text-sm font-sans tracking-widest uppercase bg-zrk-gold text-industrial-dark px-8 py-4 hover:bg-industrial-dark hover:text-industrial-light dark:hover:bg-industrial-light dark:hover:text-industrial-dark transition-colors duration-MAX ease-industrial"
-                        >
+                        <button className="btn-primary mt-4">
                             Order Sample Kit
                         </button>
                     </MotionWrapper>

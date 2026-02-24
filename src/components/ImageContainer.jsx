@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
  * without violating the "no floaty animation" constraints.
  * aspectType: 'hero' | 'product' | 'application' | 'sample' | 'catalog'
  */
-const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', parallaxOffset = 50 }) => {
+const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', parallaxOffset = 50, priority = false }) => {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -36,7 +36,8 @@ const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', paralla
                 // Scale to 110% minimum to ensure parallax movement doesn't show background clipping
                 style={{ y: yBase, scale: 1.15 }}
                 className="absolute inset-0 w-full h-full object-cover origin-center"
-                loading="lazy"
+                loading={priority ? "eager" : "lazy"}
+                fetchPriority={priority ? "high" : "auto"}
             />
 
             {/* Monolithic Slide Reveal Mask over the image */}

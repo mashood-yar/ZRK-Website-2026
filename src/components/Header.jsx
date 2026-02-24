@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,11 +39,28 @@ const Header = () => {
                     </button>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden lg:flex gap-8 text-sm font-medium tracking-wide uppercase">
-                        <Link to="/" className="hover:text-zrk-gold transition-colors duration-300">Home</Link>
-                        <Link to="/products" className="hover:text-zrk-gold transition-colors duration-300">Products</Link>
-                        <Link to="/about" className="hover:text-zrk-gold transition-colors duration-300">About</Link>
-                        <Link to="/contact" className="hover:text-zrk-gold transition-colors duration-300">Contact</Link>
+                    <nav className="hidden lg:flex gap-8 text-sm font-medium tracking-wide uppercase relative">
+                        {['/', '/products', '/about', '/contact'].map((path) => {
+                            const label = path === '/' ? 'Home' : path.substring(1);
+                            const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
+
+                            return (
+                                <Link
+                                    key={path}
+                                    to={path}
+                                    className={`relative hover:text-zrk-gold transition-colors duration-200 py-2 ${isActive ? 'text-zrk-gold' : 'text-industrial-dark dark:text-industrial-light'}`}
+                                >
+                                    {label}
+                                    {isActive && (
+                                        <motion.div
+                                            layoutId="activeNavIndicator"
+                                            className="absolute -bottom-1 left-0 right-0 h-[2px] bg-zrk-gold"
+                                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
                     </nav>
                 </div>
             </header>
@@ -54,10 +72,21 @@ const Header = () => {
                 style={{ paddingTop: '80px' }}
             >
                 <nav className="flex flex-col items-center justify-center h-full gap-8 text-2xl font-sans tracking-tighter uppercase font-bold text-industrial-dark dark:text-industrial-light">
-                    <Link to="/" className="hover:text-zrk-gold transition-colors duration-300" onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link to="/products" className="hover:text-zrk-gold transition-colors duration-300" onClick={() => setIsOpen(false)}>Products</Link>
-                    <Link to="/about" className="hover:text-zrk-gold transition-colors duration-300" onClick={() => setIsOpen(false)}>About</Link>
-                    <Link to="/contact" className="hover:text-zrk-gold transition-colors duration-300" onClick={() => setIsOpen(false)}>Contact</Link>
+                    {['/', '/products', '/about', '/contact'].map((path) => {
+                        const label = path === '/' ? 'Home' : path.substring(1);
+                        const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
+
+                        return (
+                            <Link
+                                key={path}
+                                to={path}
+                                className={`tap-target px-8 hover:text-zrk-gold transition-colors duration-200 ${isActive ? 'text-zrk-gold' : ''}`}
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {label}
+                            </Link>
+                        );
+                    })}
                 </nav>
             </div>
         </>
