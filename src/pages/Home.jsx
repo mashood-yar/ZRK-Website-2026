@@ -170,11 +170,10 @@ const Home = () => {
                         <MotionWrapper delay={0.2} yOffset={40}>
                             <div className="relative group overflow-hidden">
                                 <div className="transform group-hover:scale-[1.02] transition-transform duration-MAX ease-industrial">
-                                    <ImageContainer
-                                        src="/assets/images/home/banner-2.webp"
-                                        alt="E1 European Standards"
-                                        aspectType="application"
-                                        parallaxOffset={35}
+                                    <img
+                                        src="/assets/images/dark-walnut.png"
+                                        alt="E1 European Standards - Dark Walnut"
+                                        className="w-auto h-auto max-w-full block mx-auto"
                                     />
                                 </div>
                             </div>
