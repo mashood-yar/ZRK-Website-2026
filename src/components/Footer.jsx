@@ -10,7 +10,7 @@ const Footer = () => {
                         ZRK Group
                     </Link>
                     <p className="text-sm text-tundora font-body max-w-xs">
-                        Global premium manufacturer. Defining the standard since 1993.
+                        High-Quality MDF & Laminated Boards | ZRK Group Pakistan
                     </p>
                 </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
                 <div>
                     <h4 className="font-sans uppercase tracking-widest text-xs mb-6 text-zrk-gold">Contact</h4>
                     <p className="text-sm text-tundora mb-2">info@zrkgroup.com</p>
-                    <p className="text-sm text-tundora">+92 111 111 975</p>
+                    <p className="text-sm text-tundora">WhatsApp: +92 333 297 5975</p>
                 </div>
             </div>
 

@@ -59,7 +59,7 @@ export default function DesignStudio() {
                     transition={{ duration: 0.8 }}
                 >
                     <img
-                        src="https://zrkgroup.com/public/front/img/home/catalouge.jpg"
+                        src="/assets/images/designstudio/52.webp"
                         alt="ZRK Design Studio Interior"
                         className="w-full h-full object-cover"
                     />

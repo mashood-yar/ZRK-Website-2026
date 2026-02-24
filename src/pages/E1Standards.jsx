@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 export default function E1Standards() {
     const benefits = [
-        { title: "Low Formaldehyde Emissions", desc: "Releases low levels of formaldehyde, making it safer for indoor air quality and reducing health risks." },
-        { title: "Improved Indoor Air Quality", desc: "Crucial for homes, schools, and workplaces where air quality translates directly to productivity and health." },
-        { title: "Healthier Living Environment", desc: "Especially important in environments frequented by children, the elderly, or those with respiratory issues." },
-        { title: "Versatility in Applications", desc: "Used for a wide range of applications, including furniture, cabinetry, panelling, and decorative projects." },
-        { title: "Compliance with Regulations", desc: "Meets international health and safety regulations, suitable for global markets and building codes." },
-        { title: "Durability and Performance", desc: "Retains the strength, durability, and workability of standard MDF without the chemical payload." }
+        { title: "Low Formaldehyde Emissions", desc: "E1 certification ensures that the MDF releases low levels of formaldehyde, making it safer for indoor air quality and reducing health risks associated with prolonged exposure." },
+        { title: "Improved Indoor Air Quality", desc: "With lower emissions, E1 MDF contributes to better indoor air quality, which is crucial for homes, schools, and workplaces." },
+        { title: "Healthier Living Environment", desc: "The reduced chemical emissions make E1 MDF a healthier choice, especially important in environments frequented by children, the elderly, or those with respiratory issues." },
+        { title: "Versatility in Applications", desc: "E1 MDF can be used for a wide range of applications, including furniture, cabinetry, panelling, and decorative projects, without the worry of high chemical emissions." },
+        { title: "Compliance with Regulations", desc: "E1 MDF meets international health and safety regulations, making it suitable for global markets and ensuring compliance with building and manufacturing codes." },
+        { title: "Durability and Performance", desc: "E1 MDF still retains the strength, durability, and workability of standard MDF, making it a practical choice for various construction and design needs." }
     ];
 
     return (

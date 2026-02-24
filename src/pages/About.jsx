@@ -18,8 +18,8 @@ const About = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
                     <MotionWrapper delay={0.2} yOffset={30}>
                         <ImageContainer
-                            src="/assets/raw-mdf.webp"
-                            alt="Raw Medium Density Fiberboard Production"
+                            src="/assets/images/about/about.png"
+                            alt="About ZRK Group"
                             aspectType="product"
                             parallaxOffset={30}
                         />
@@ -29,10 +29,10 @@ const About = () => {
                         <div className="pt-8 lg:pt-24 border-t border-tundora/20">
                             <h2 className="text-sm font-sans uppercase tracking-widest text-zrk-gold mb-6">Our Legacy</h2>
                             <p className="text-xl md:text-2xl font-medium text-industrial-dark dark:text-industrial-light leading-relaxed mb-8">
-                                Since 1993, ZRK Group has been synonymous with structural reliability. We don't just manufacture wood panels; we engineer the foundation for the world's most ambitious architectural projects.
+                                Founded in 1992, the ZRK Group stands as a prominent family-owned enterprise specializing in the manufacturing of MDF, particleboard, laminated boards and door skins.
                             </p>
                             <p className="text-tundora dark:text-gray-400">
-                                Operating Pakistan's largest fully automated continuous press plants, our state-of-the-art facilities ensure unprecedented density profiles, surface smoothness, and absolute compliance with European emission standards (E1).
+                                A monumental stride was achieved in 2008 with the inauguration of a state-of-the-art MDF Manufacturing plant, solidifying the company's position as an industry leader. The commitment to technological advancement and innovation remained unwavering.
                             </p>
                         </div>
                     </MotionWrapper>

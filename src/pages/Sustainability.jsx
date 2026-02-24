@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 
 export default function Sustainability() {
     const initiatives = [
-        { title: "Renewable Resource", desc: "Wood is a renewable resource; our trees are replanted and grown to replace harvested timber." },
-        { title: "Carbon Sequestration", desc: "Our products act as physical carbon sinks, storing absorbed carbon dioxide and mitigating climate change." },
-        { title: "Emission Control", desc: "Strict emission protocols reduce harmful atmospheric pollutants via constant technological upgrades." },
-        { title: "Efficient Energy Use", desc: "Optimizing energy consumption across our facilities utilizing massive renewable rooftop solar solutions." },
-        { title: "Waste Management", desc: "Comprehensive up-cycling strategies to minimize generation and maximize raw material reuse." }
+        { title: "Renewable Resource", desc: "Wood is a renewable resource, meaning that trees can be replanted and grown to replace those that are harvested." },
+        { title: "Carbon Sequestration", desc: "Trees absorb carbon dioxide from the atmosphere as they grow. When wood is used in products, it continues to store carbon, acting as a carbon sink and mitigating climate change." },
+        { title: "Emission Control", desc: "Our production processes adhere to strict emission standards, reducing harmful pollutants released into the atmosphere. We continuously invest in technologies that minimize our carbon footprint." },
+        { title: "Efficient Energy Use", desc: "ZRK Group is dedicated to optimizing energy consumption across our facilities. From efficient machinery to renewable energy solutions, we're committed to reducing energy waste." },
+        { title: "Waste Management", desc: "We implement comprehensive waste management strategies to minimize waste generation and promote recycling. By reusing materials and reducing waste, we're contributing to a cleaner environment." }
     ];
 
     return (
@@ -51,8 +51,8 @@ export default function Sustainability() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <img
-                            src="https://zrkgroup.com/public/front/img/about/about.png"
-                            alt="ZRK Factory Solar Roofs"
+                            src="/assets/images/environment/RAW%20MATERIALS%20FROM%20MANAGED%20FORESTS.jpg"
+                            alt="Raw Materials From Managed Forests"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-zrk-black/20 mix-blend-overlay"></div>

@@ -13,9 +13,9 @@ const Home = () => {
                 <MotionWrapper yOffset={30}>
                     <div className="mb-8 relative z-10">
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold uppercase tracking-tighter text-industrial-dark dark:text-industrial-light leading-[0.9]">
-                            <StaggeredText text="The Standard." />
+                            <StaggeredText text="High-Quality MDF" />
                             <br />
-                            <StaggeredText text="Redefined." className="text-zrk-gold" delayOffset={0.2} />
+                            <StaggeredText text="& Laminated Boards" className="text-zrk-gold" delayOffset={0.2} />
                         </h1>
                     </div>
                 </MotionWrapper>
@@ -23,8 +23,8 @@ const Home = () => {
                 <MotionWrapper delay={0.2} yOffset={40}>
                     <div className="relative group -mt-10 lg:-mt-20 z-0">
                         <ImageContainer
-                            src="/assets/boardroom.webp"
-                            alt="Premium ZRK Boardroom Application"
+                            src="/assets/images/home/banner-1.webp"
+                            alt="High-Quality MDF & Laminated Boards"
                             aspectType="hero"
                             parallaxOffset={40}
                         />
@@ -35,7 +35,7 @@ const Home = () => {
                 <MotionWrapper delay={0.4} yOffset={20}>
                     <div className="mt-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-tundora/20 pb-8">
                         <p className="max-w-xl text-lg font-medium text-tundora dark:text-gray-400">
-                            Transforming spaces with precision-engineered MDF and particleboard. Global quality, manufactured for excellence.
+                            Discover ZRK Group's premium MDF and laminated boards in Pakistan. Ideal for furniture and interior design, our products combine quality and durability.
                         </p>
                         <Link
                             to="/products"
@@ -59,9 +59,9 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
                         {[
-                            { id: 1, name: "Dark Walnut", src: "/assets/dark-walnut.webp", desc: "Rich tracking grain pattern" },
-                            { id: 2, name: "Bleached Oak", src: "/assets/bleached-oak.webp", desc: "Minimalist light wood texture" },
-                            { id: 3, name: "Matte Charcoal", src: "/assets/matte-charcoal.webp", desc: "Ultra-matte solid finish" }
+                            { id: 1, name: "Furniture and Interior", src: "/assets/images/home/catalouge.jpg", desc: "Premium quality for enduring spaces" },
+                            { id: 2, name: "Wall Panel", src: "/assets/images/home/where-to-buy.jpg", desc: "Aesthetic and durable interior solutions" },
+                            { id: 3, name: "Door Skins", src: "/assets/images/home/banner-2.webp", desc: "Engineered excellence for doors" }
                         ].map((product, idx) => (
                             <MotionWrapper key={product.id} delay={0.1 * idx} yOffset={30}>
                                 <Link to="/products" className="block group">
@@ -92,17 +92,17 @@ const Home = () => {
                     <div className="lg:col-span-5 order-2 lg:order-1">
                         <MotionWrapper yOffset={30}>
                             <h2 className="text-4xl md:text-5xl font-sans font-bold uppercase tracking-tighter mb-6 text-industrial-dark dark:text-industrial-light">
-                                <StaggeredText text="Industrial" /> <br />
-                                <StaggeredText text="Application" delayOffset={0.1} />
+                                <StaggeredText text="E1 European" /> <br />
+                                <StaggeredText text="Standards" delayOffset={0.1} />
                             </h2>
                             <p className="text-tundora dark:text-gray-400 mb-8 max-w-md">
-                                From corporate environments to modern residential spaces, our materials provide the structural integrity and aesthetic finish demanded by visionary architects.
+                                Setting the benchmark for environmental safety and product quality. ZRK Group is committed to high standards of excellence.
                             </p>
                             <Link
                                 to="/products"
                                 className="inline-flex items-center gap-4 text-sm font-sans tracking-widest uppercase border border-industrial-dark dark:border-industrial-light px-8 py-4 hover:bg-industrial-dark hover:text-industrial-light dark:hover:bg-industrial-light dark:hover:text-industrial-dark transition-colors duration-MAX ease-industrial"
                             >
-                                View Case Studies
+                                Learn More
                             </Link>
                         </MotionWrapper>
                     </div>
@@ -112,8 +112,8 @@ const Home = () => {
                             <div className="relative group overflow-hidden">
                                 <div className="transform group-hover:scale-[1.02] transition-transform duration-MAX ease-industrial">
                                     <ImageContainer
-                                        src="/assets/kitchen.webp"
-                                        alt="Modern Kitchen Application"
+                                        src="/assets/images/home/banner-2.webp"
+                                        alt="E1 European Standards"
                                         aspectType="application"
                                         parallaxOffset={35}
                                     />
@@ -128,7 +128,7 @@ const Home = () => {
             <section className="px-6 py-32 bg-zrk-gold text-industrial-dark text-center relative overflow-hidden group">
                 <MotionWrapper yOffset={30}>
                     <h2 className="text-4xl md:text-7xl font-sans font-bold uppercase tracking-tighter mb-8 max-w-4xl mx-auto">
-                        <StaggeredText text="Build the Future." />
+                        <StaggeredText text="ZRK Group Pakistan" />
                     </h2>
                     <Link
                         to="/contact"

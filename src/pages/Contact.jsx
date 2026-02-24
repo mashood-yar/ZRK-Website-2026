@@ -22,14 +22,14 @@ const Contact = () => {
                         <MotionWrapper delay={0.1} yOffset={20}>
                             <h3 className="text-xs font-sans uppercase tracking-widest text-zrk-gold mb-4">Global Headquarters</h3>
                             <p className="text-lg text-industrial-dark dark:text-industrial-light font-medium">
-                                1st Floor, Imperial Square,<br />
-                                Mardan Road, Peshawar<br />
+                                ZRK Group # 16-17 Industrial Estate,<br />
+                                Peshawar,<br />
                                 Pakistan
                             </p>
                         </MotionWrapper>
                         <MotionWrapper delay={0.2} yOffset={20}>
                             <h3 className="text-xs font-sans uppercase tracking-widest text-zrk-gold mb-4">Direct Lines</h3>
-                            <p className="text-lg text-industrial-dark dark:text-industrial-light font-medium">UAN: +92 111 111 975</p>
+                            <p className="text-lg text-industrial-dark dark:text-industrial-light font-medium">WhatsApp: +92 333 297 5975</p>
                             <p className="text-lg text-industrial-dark dark:text-industrial-light font-medium">Email: info@zrkgroup.com</p>
                         </MotionWrapper>
                     </div>

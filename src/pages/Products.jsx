@@ -6,10 +6,10 @@ import { ArrowDown } from 'lucide-react';
 
 const Products = () => {
     const products = [
-        { id: 1, name: "Dark Walnut", src: "/assets/dark-walnut.webp", desc: "Rich tracking grain pattern. Ideal for executive suites.", type: "Particleboard", spec: "750 kg/m³" },
-        { id: 2, name: "Bleached Oak", src: "/assets/bleached-oak.webp", desc: "Minimalist light wood texture. Perfect for contemporary interiors.", type: "MDF", spec: "800 kg/m³" },
-        { id: 3, name: "Matte Charcoal", src: "/assets/matte-charcoal.webp", desc: "Ultra-matte solid finish. Fingerprint resistant.", type: "MDF", spec: "820 kg/m³" },
-        { id: 4, name: "Raw MDF core", src: "/assets/raw-mdf.webp", desc: "High density structural core. The foundation of excellence.", type: "Raw Material", spec: "850 kg/m³" }
+        { id: 1, name: "UV Lux", src: "/assets/images/home/banner-1.webp", desc: "High Gloss Elite finishes.", type: "Laminated Boards", spec: "Premium" },
+        { id: 2, name: "Lamination Series", src: "/assets/images/home/banner-2.webp", desc: "Textured Laminates & Melamine Laminated boards.", type: "Laminated Boards", spec: "Standard" },
+        { id: 3, name: "MDF", src: "/assets/images/about/about.png", desc: "High density structural core. The foundation of excellence.", type: "Raw Material", spec: "E1 Standard" },
+        { id: 4, name: "Particleboard", src: "/assets/images/home/catalouge.jpg", desc: "Durable and versatile core material.", type: "Raw Material", spec: "Standard" }
     ];
 
     return (
@@ -23,7 +23,7 @@ const Products = () => {
                         <span className="text-zrk-gold">Library.</span>
                     </h1>
                     <p className="max-w-2xl text-lg font-medium text-gray-400">
-                        Engineered precision. Structural integrity. A curated selection of premium decors and core materials for global applications.
+                        Discover ZRK Group's premium MDF and laminated boards in Pakistan. Ideal for furniture and interior design, our products combine quality and durability.
                     </p>
                 </MotionWrapper>
             </section>
@@ -78,7 +78,7 @@ const Products = () => {
                     <MotionWrapper yOffset={30}>
                         <div className="transform group-hover:scale-[0.98] transition-transform duration-MAX ease-industrial overflow-hidden border border-tundora/20">
                             <ImageContainer
-                                src="/assets/sample-box.webp"
+                                src="/assets/images/home/catalouge.jpg"
                                 alt="Architectural Sample Box"
                                 aspectType="catalog"
                                 parallaxOffset={10}
