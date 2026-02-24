@@ -6,10 +6,10 @@ import { ArrowDown } from 'lucide-react';
 
 const Products = () => {
     const products = [
-        { id: 1, name: "UV Lux", src: "/assets/images/home/banner-1.webp", desc: "High Gloss Elite finishes.", type: "Laminated Boards", spec: "Premium" },
-        { id: 2, name: "Lamination Series", src: "/assets/images/home/banner-2.webp", desc: "Textured Laminates & Melamine Laminated boards.", type: "Laminated Boards", spec: "Standard" },
-        { id: 3, name: "MDF", src: "/assets/images/about/about.png", desc: "High density structural core. The foundation of excellence.", type: "Raw Material", spec: "E1 Standard" },
-        { id: 4, name: "Particleboard", src: "/assets/images/home/catalouge.jpg", desc: "Durable and versatile core material.", type: "Raw Material", spec: "Standard" }
+        { id: 1, name: "UV Lux", src: "/assets/images/dark-walnut.png", desc: "High Gloss Elite finishes.", type: "Laminated Boards", spec: "Premium" },
+        { id: 2, name: "Lamination Series", src: "/assets/images/matte-charcoal.png", desc: "Textured Laminates & Melamine Laminated boards.", type: "Laminated Boards", spec: "Standard" },
+        { id: 3, name: "MDF", src: "/assets/images/raw-mdf.png", desc: "High density structural core. The foundation of excellence.", type: "Raw Material", spec: "E1 Standard" },
+        { id: 4, name: "Particleboard", src: "/assets/images/scandinavian-oak.png", desc: "Durable and versatile core material.", type: "Raw Material", spec: "Standard" }
     ];
 
     return (
@@ -77,7 +77,7 @@ const Products = () => {
                     <MotionWrapper yOffset={30}>
                         <div className="transform group-hover:scale-[0.98] transition-transform duration-MAX ease-industrial overflow-hidden border border-tundora/20">
                             <ImageContainer
-                                src="/assets/images/home/catalouge.jpg"
+                                src="/assets/images/sample-box.png"
                                 alt="Architectural Sample Box"
                                 aspectType="catalog"
                                 parallaxOffset={10}

@@ -60,9 +60,9 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
                         {[
-                            { id: 1, name: "Furniture and Interior", src: "/assets/images/home/catalouge.jpg", desc: "Premium quality for enduring spaces" },
-                            { id: 2, name: "Wall Panel", src: "/assets/images/home/where-to-buy.jpg", desc: "Aesthetic and durable interior solutions" },
-                            { id: 3, name: "Door Skins", src: "/assets/images/home/banner-2.webp", desc: "Engineered excellence for doors" }
+                            { id: 1, name: "Furniture and Interior", src: "/assets/images/residential-kitchen.png", desc: "Premium quality for enduring spaces" },
+                            { id: 2, name: "Wall Panel", src: "/assets/images/hotel-lobby.png", desc: "Aesthetic and durable interior solutions" },
+                            { id: 3, name: "Door Skins", src: "/assets/images/corporate-boardroom.png", desc: "Engineered excellence for doors" }
                         ].map((product, idx) => (
                             <MotionWrapper key={product.id} delay={0.1 * idx} yOffset={30}>
                                 <Link to="/products" className="block group">

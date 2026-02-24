@@ -44,6 +44,71 @@ const About = () => {
                 </div>
             </section>
 
+            {/* Core Values: Vision, Philosophy, Compliance */}
+            <section className="px-6 py-24 max-w-7xl mx-auto border-t border-tundora/20">
+                <div className="space-y-32">
+                    {/* Vision */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <MotionWrapper yOffset={30} className="order-2 lg:order-1">
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold uppercase tracking-tighter mb-8 text-industrial-dark dark:text-industrial-light">
+                                <StaggeredText text="Vision" />
+                            </h2>
+                            <p className="text-lg text-tundora dark:text-gray-400 leading-relaxed font-body">
+                                We believe that manufacturing quality products is the first step towards building lasting relationships. On every step, we aim to create a unique value for our partners, customers and stakeholders. We ensure smooth workflows through technology and innovation, and upgrade our processes.
+                            </p>
+                        </MotionWrapper>
+                        <MotionWrapper delay={0.2} yOffset={40} className="order-1 lg:order-2">
+                            <ImageContainer
+                                src="/assets/images/about/our-vision.jpg"
+                                alt="ZRK Group Vision"
+                                aspectType="application"
+                                parallaxOffset={20}
+                            />
+                        </MotionWrapper>
+                    </div>
+
+                    {/* Philosophy */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <MotionWrapper delay={0.2} yOffset={40}>
+                            <ImageContainer
+                                src="/assets/images/about/philosophy-1.jpg"
+                                alt="ZRK Group Philosophy"
+                                aspectType="application"
+                                parallaxOffset={20}
+                            />
+                        </MotionWrapper>
+                        <MotionWrapper yOffset={30}>
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold uppercase tracking-tighter mb-8 text-industrial-dark dark:text-industrial-light">
+                                <StaggeredText text="Philosophy" />
+                            </h2>
+                            <p className="text-lg text-tundora dark:text-gray-400 leading-relaxed font-body">
+                                Our philosophy resonates with our resolute resolve to consistently surpass industry benchmarks, fostering innovation, and orchestrating responsible practices. Through this embodiment of wisdom, expertise, and unwavering commitment, ZRK Group endeavors to redefine the very landscape of wood processing, setting new standards of excellence and heralding a sustainable and visionary future.
+                            </p>
+                        </MotionWrapper>
+                    </div>
+
+                    {/* Compliance */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <MotionWrapper yOffset={30} className="order-2 lg:order-1">
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold uppercase tracking-tighter mb-8 text-industrial-dark dark:text-industrial-light">
+                                <StaggeredText text="Compliance" />
+                            </h2>
+                            <p className="text-lg text-tundora dark:text-gray-400 leading-relaxed font-body">
+                                ZRK Group is committed to upholding the highest standards of compliance in all its operations. Our compliance policy reflects our dedication to ethical conduct, legal adherence, and responsible practices. We prioritize transparency, integrity, and accountability in our interactions with stakeholders, employees, partners, and the communities we operate in. By adhering to local and international regulations, we ensure that our business practices contribute positively to society and the environment while maintaining the trust and confidence of all those we engage with.
+                            </p>
+                        </MotionWrapper>
+                        <MotionWrapper delay={0.2} yOffset={40} className="order-1 lg:order-2">
+                            <ImageContainer
+                                src="/assets/images/about/compliance.jpg"
+                                alt="ZRK Group Compliance"
+                                aspectType="application"
+                                parallaxOffset={20}
+                            />
+                        </MotionWrapper>
+                    </div>
+                </div>
+            </section>
+
             <section className="px-6 py-24 bg-industrial-dark text-industrial-light">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                     <MotionWrapper delay={0}>
