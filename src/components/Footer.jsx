@@ -6,8 +6,8 @@ const Footer = () => {
         <footer className="bg-industrial-dark text-industrial-light py-16 px-6 border-t border-tundora/20">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div className="md:col-span-1">
-                    <Link to="/" className="text-2xl font-sans tracking-tighter uppercase font-bold mb-6 block">
-                        ZRK Group
+                    <Link to="/" className="mb-6 block">
+                        <img src="/assets/images/zrk-logo.png" alt="ZRK Group" className="h-10 md:h-12 w-auto invert opacity-90 hover:opacity-100 transition-opacity duration-300" />
                     </Link>
                     <p className="text-sm text-tundora font-body max-w-xs">
                         High-Quality MDF & Laminated Boards | ZRK Group Pakistan

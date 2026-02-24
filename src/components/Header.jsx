@@ -25,8 +25,8 @@ const Header = () => {
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
-                    <Link to="/" className="text-xl font-sans tracking-tighter uppercase font-bold text-industrial-dark dark:text-industrial-light relative z-50">
-                        ZRK Group
+                    <Link to="/" className="relative z-50 flex items-center">
+                        <img src="/assets/images/zrk-logo.png" alt="ZRK Group" className="h-8 md:h-10 w-auto dark:invert transition-all duration-300" />
                     </Link>
 
                     {/* Mobile Menu Toggle */}
