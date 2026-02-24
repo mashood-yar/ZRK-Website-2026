@@ -10,6 +10,7 @@ const Products = lazy(() => import('./pages/Products'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const DesignStudio = lazy(() => import('./pages/DesignStudio'));
+const Catalogues = lazy(() => import('./pages/Catalogues'));
 const E1Standards = lazy(() => import('./pages/E1Standards'));
 const Sustainability = lazy(() => import('./pages/Sustainability'));
 
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/products" element={<PageTransition><Products /></PageTransition>} />
         <Route path="/designstudio" element={<PageTransition><DesignStudio /></PageTransition>} />
+        <Route path="/catalogues" element={<PageTransition><Catalogues /></PageTransition>} />
         <Route path="/e1" element={<PageTransition><E1Standards /></PageTransition>} />
         <Route path="/sustainability" element={<PageTransition><Sustainability /></PageTransition>} />
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />

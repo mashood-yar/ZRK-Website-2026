@@ -40,8 +40,8 @@ const Header = () => {
 
                     {/* Desktop Nav */}
                     <nav className="hidden lg:flex gap-8 text-sm font-medium tracking-wide uppercase relative">
-                        {['/', '/products', '/designstudio', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
-                            const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : path.substring(1))));
+                        {['/', '/products', '/designstudio', '/catalogues', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
+                            const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : (path === '/catalogues' ? 'Catalogues' : path.substring(1)))));
                             const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
 
                             return (
@@ -72,8 +72,8 @@ const Header = () => {
                 style={{ paddingTop: '80px' }}
             >
                 <nav className="flex flex-col items-center justify-center h-full gap-8 text-2xl font-sans tracking-tighter uppercase font-bold text-industrial-dark dark:text-industrial-light">
-                    {['/', '/products', '/designstudio', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
-                        const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : path.substring(1))));
+                    {['/', '/products', '/designstudio', '/catalogues', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
+                        const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : (path === '/catalogues' ? 'Catalogues' : path.substring(1)))));
                         const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
 
                         return (
