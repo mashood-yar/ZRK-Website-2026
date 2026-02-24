@@ -1,9 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import MotionWrapper from '../components/MotionWrapper';
 import ImageContainer from '../components/ImageContainer';
 import StaggeredText from '../components/StaggeredText';
+
+const slides = [
+    {
+        id: 1,
+        desktop: "/assets/images/home/banner-1.webp",
+        mobile: "/assets/images/home/mobile-banner-1.webp"
+    },
+    {
+        id: 2,
+        desktop: "/assets/images/home/banner-2.webp",
+        mobile: "/assets/images/home/mobile-banner-2.webp"
+    }
+];
+
+const CinematicSlider = () => {
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % slides.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, []);
+
+    return (
+        <div className="relative w-full aspect-hero overflow-hidden rounded filter grayscale-[15%]">
+            <AnimatePresence>
+                <motion.div
+                    key={current}
+                    initial={{ opacity: 0, scale: 1 }}
+                    animate={{ opacity: 1, scale: 1.1 }}
+                    exit={{ opacity: 0, scale: 1.15 }}
+                    transition={{
+                        opacity: { duration: 1.5, ease: "easeInOut" },
+                        scale: { duration: 9, ease: "linear" }
+                    }}
+                    className="absolute inset-0 w-full h-full origin-center"
+                >
+                    <picture>
+                        <source media="(max-width: 768px)" srcSet={slides[current].mobile} />
+                        <img
+                            src={slides[current].desktop}
+                            alt={`ZRK Architectural Banner ${current + 1}`}
+                            className="w-full h-full object-cover"
+                            loading={current === 0 ? "eager" : "lazy"}
+                            fetchpriority={current === 0 ? "high" : "auto"}
+                        />
+                    </picture>
+                </motion.div>
+            </AnimatePresence>
+
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+                {slides.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setCurrent(i)}
+                        className={`transition-all duration-500 rounded-full ${i === current ? 'w-8 h-1.5 bg-zrk-gold' : 'w-2 h-1.5 bg-white/50 hover:bg-white'} `}
+                        aria-label={`Go to slide ${i + 1}`}
+                    />
+                ))}
+            </div>
+
+            {/* Cinematic Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-industrial-dark/60 via-transparent to-transparent pointer-events-none z-10" />
+        </div>
+    );
+};
 
 const Home = () => {
     return (
@@ -22,14 +90,7 @@ const Home = () => {
 
                 <MotionWrapper delay={0.2} yOffset={40}>
                     <div className="relative group -mt-10 lg:-mt-20 z-0">
-                        <ImageContainer
-                            src="/assets/images/home/banner-1.webp"
-                            alt="High-Quality MDF & Laminated Boards"
-                            aspectType="hero"
-                            parallaxOffset={40}
-                            priority={true}
-                        />
-                        <div className="absolute inset-0 bg-industrial-dark/10 transition-colors duration-MAX ease-industrial group-hover:bg-transparent pointer-events-none"></div>
+                        <CinematicSlider />
                     </div>
                 </MotionWrapper>
 
