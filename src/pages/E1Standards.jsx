@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import MotionWrapper from '../components/MotionWrapper';
+import StaggeredText from '../components/StaggeredText';
 
 export default function E1Standards() {
     const benefits = [
@@ -13,25 +15,20 @@ export default function E1Standards() {
     return (
         <div className="pt-24 min-h-screen bg-[var(--bg-color)]">
             {/* Header */}
-            <section className="py-16 md:py-24 px-4 md:px-8 bg-zrk-bg dark:bg-black/20 border-b border-gray-200 dark:border-zinc-800">
+            <section className="py-24 px-4 md:px-8 border-b border-tundora/20">
                 <div className="max-w-4xl mx-auto text-center">
-                    <motion.h1
-                        className="font-sans font-bold text-4xl md:text-5xl text-zrk-black dark:text-white mb-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        E1 Emission <span className="text-zrk-gold">Standards.</span>
-                    </motion.h1>
-                    <motion.p
-                        className="font-body text-gray-600 dark:text-gray-400 text-lg md:text-xl leading-relaxed"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        ZRK Group’s E1 MDF meets top-tier European emission standards, offering significant
-                        advantages by enhancing indoor air quality, reducing environmental impact, and ensuring superior product safety.
-                    </motion.p>
+                    <MotionWrapper yOffset={30}>
+                        <h1 className="font-sans font-bold text-5xl md:text-7xl text-industrial-dark dark:text-industrial-light mb-8 uppercase tracking-tight leading-[0.9]">
+                            <StaggeredText text="E1 Emission" /> <br />
+                            <StaggeredText text="Standards." className="text-zrk-gold" delayOffset={0.2} />
+                        </h1>
+                    </MotionWrapper>
+                    <MotionWrapper delay={0.4} yOffset={20}>
+                        <p className="font-body text-tundora dark:text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                            ZRK Group’s E1 MDF meets top-tier European emission standards, offering significant
+                            advantages by enhancing indoor air quality, reducing environmental impact, and ensuring superior product safety.
+                        </p>
+                    </MotionWrapper>
                 </div>
             </section>
 
@@ -39,17 +36,16 @@ export default function E1Standards() {
             <section className="py-16 md:py-24 px-4 md:px-8 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {benefits.map((benefit, i) => (
-                        <motion.div
-                            key={i}
-                            className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                        >
-                            <h3 className="font-sans font-bold text-xl text-zrk-black dark:text-white mb-3">{benefit.title}</h3>
-                            <p className="font-body text-gray-600 dark:text-gray-400">{benefit.desc}</p>
-                        </motion.div>
+                        <MotionWrapper key={i} delay={i * 0.1} yOffset={30}>
+                            <div className="structural-panel h-full flex flex-col group transform hover:-translate-y-2 transition-transform duration-500">
+                                <h3 className="font-sans font-bold text-xl text-industrial-dark dark:text-industrial-light mb-4 group-hover:text-zrk-gold transition-colors duration-300">
+                                    {benefit.title}
+                                </h3>
+                                <p className="font-body text-tundora dark:text-gray-400 leading-relaxed text-sm">
+                                    {benefit.desc}
+                                </p>
+                            </div>
+                        </MotionWrapper>
                     ))}
                 </div>
             </section>

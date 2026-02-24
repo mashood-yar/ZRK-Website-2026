@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import MotionWrapper from '../components/MotionWrapper';
+import ImageContainer from '../components/ImageContainer';
+import StaggeredText from '../components/StaggeredText';
 
 export default function Sustainability() {
     const initiatives = [
@@ -15,48 +18,53 @@ export default function Sustainability() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                     {/* Copy Column */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <h1 className="font-sans font-bold text-4xl md:text-5xl lg:text-6xl text-zrk-black dark:text-white mb-6 uppercase tracking-tight">
-                            Circular <br /><span className="text-zrk-gold">Economy.</span>
-                        </h1>
-                        <p className="font-body text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">
-                            Our commitment to environmental responsibility is at the core of our operations.
-                            We implement radical initiatives that minimize our ecological footprint by obtaining raw materials entirely from managed forests and sustainable tree plantations.
-                        </p>
+                    <MotionWrapper yOffset={30}>
+                        <div className="md:w-11/12 mt-12 md:mt-0">
+                            <h1 className="font-sans font-bold text-5xl md:text-6xl lg:text-7xl text-industrial-dark dark:text-industrial-light mb-8 uppercase tracking-tight leading-[0.9]">
+                                <StaggeredText text="Circular" /> <br />
+                                <StaggeredText text="Economy." className="text-zrk-gold" delayOffset={0.2} />
+                            </h1>
+                            <p className="font-body text-tundora dark:text-gray-400 mb-10 text-lg md:text-xl leading-relaxed max-w-lg">
+                                Our commitment to environmental responsibility is at the core of our operations.
+                                We implement radical initiatives that minimize our ecological footprint by obtaining raw materials entirely from managed forests and sustainable tree plantations.
+                            </p>
 
-                        <div className="space-y-6">
-                            {initiatives.map((item, i) => (
-                                <div key={i} className="flex gap-4">
-                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-zrk-gold/10 flex items-center justify-center font-sans font-bold text-zrk-gold">
-                                        {i + 1}
-                                    </div>
-                                    <div>
-                                        <h3 className="font-sans font-bold text-zrk-black dark:text-white text-lg">{item.title}</h3>
-                                        <p className="font-body text-gray-600 dark:text-gray-400 text-sm mt-1">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
+                            <div className="space-y-8 pl-2">
+                                {initiatives.map((item, i) => (
+                                    <MotionWrapper key={i} delay={i * 0.1}>
+                                        <div className="flex gap-6 group">
+                                            {/* Von Restorff Effect on the Number */}
+                                            <div className="flex-shrink-0 w-12 h-12 rounded-full border border-zrk-gold/30 bg-transparent flex items-center justify-center font-sans font-bold text-zrk-gold group-hover:bg-zrk-gold group-hover:text-white transition-all duration-300">
+                                                0{i + 1}
+                                            </div>
+                                            <div>
+                                                <h3 className="font-sans font-bold text-industrial-dark dark:text-industrial-light text-xl mb-2 group-hover:text-zrk-gold transition-colors duration-300">{item.title}</h3>
+                                                <p className="font-body text-tundora dark:text-gray-400 text-sm leading-relaxed max-w-sm">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    </MotionWrapper>
+                                ))}
+                            </div>
                         </div>
-                    </motion.div>
+                    </MotionWrapper>
 
                     {/* Image Node */}
-                    <motion.div
-                        className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] relative"
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        <img
-                            src="/assets/images/environment/RAW%20MATERIALS%20FROM%20MANAGED%20FORESTS.jpg"
-                            alt="Raw Materials From Managed Forests"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-zrk-black/20 mix-blend-overlay"></div>
-                    </motion.div>
+                    <MotionWrapper delay={0.2} yOffset={40}>
+                        <div className="w-full pt-8 md:pt-0">
+                            <div className="w-full aspect-[4/5] rounded-tl-[100px] rounded-br-[100px] overflow-hidden shadow-2xl relative group">
+                                <div className="transform group-hover:scale-105 transition-transform duration-[1.5s] ease-industrial h-full">
+                                    <ImageContainer
+                                        src="/assets/images/environment/RAW%20MATERIALS%20FROM%20MANAGED%20FORESTS.jpg"
+                                        alt="Raw Materials From Managed Forests"
+                                        aspectType="hero"
+                                        className="w-full h-full"
+                                        parallaxOffset={30}
+                                    />
+                                </div>
+                                <div className="absolute inset-0 bg-zrk-black/20 mix-blend-overlay pointer-events-none"></div>
+                            </div>
+                        </div>
+                    </MotionWrapper>
 
                 </div>
             </section>
