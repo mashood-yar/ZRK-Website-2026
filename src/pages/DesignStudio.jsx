@@ -8,6 +8,25 @@ export default function DesignStudio() {
     return (
         <div className="pt-24 min-h-screen bg-[var(--bg-color)]">
 
+            {/* Header Section */}
+            <section className="py-24 px-4 md:px-8 border-b border-tundora/20">
+                <div className="max-w-4xl mx-auto text-center">
+                    <MotionWrapper yOffset={30}>
+                        <h1 className="font-sans font-bold text-5xl md:text-7xl lg:text-8xl text-industrial-dark dark:text-industrial-light mb-8 uppercase tracking-tight leading-[0.9]">
+                            <StaggeredText text="Design" /> <br />
+                            <StaggeredText text="Studio." className="text-zrk-gold" delayOffset={0.2} />
+                        </h1>
+                    </MotionWrapper>
+                    <MotionWrapper delay={0.4} yOffset={20}>
+                        <p className="font-body text-tundora dark:text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                            Experience our premium Laminated Boards and MDF textures in person.
+                            Our flagship Design Studio in Islamabad offers architects and enterprise clients
+                            an immersive tactical environment to source materials for global projects.
+                        </p>
+                    </MotionWrapper>
+                </div>
+            </section>
+
             <section className="py-16 md:py-24 px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
 
                 {/* Left Col - Booking Details */}
@@ -16,15 +35,6 @@ export default function DesignStudio() {
                         <div className="inline-block px-4 py-2 border border-zrk-gold/30 rounded-full text-zrk-gold font-body text-sm font-medium mb-8">
                             Exclusive Showroom
                         </div>
-                        <h1 className="font-sans font-bold text-5xl md:text-6xl lg:text-7xl text-zrk-black dark:text-white mb-8 uppercase tracking-tight leading-[0.9]">
-                            <StaggeredText text="Design" /> <br />
-                            <StaggeredText text="Studio." className="text-zrk-gold" delayOffset={0.2} />
-                        </h1>
-                        <p className="font-body text-tundora dark:text-gray-400 mb-10 text-lg md:text-xl leading-relaxed max-w-lg">
-                            Experience our premium Laminated Boards and MDF textures in person.
-                            Our flagship Design Studio in Islamabad offers architects and enterprise clients
-                            an immersive tactical environment to source materials for global projects.
-                        </p>
 
                         <div className="space-y-6 mb-12">
                             <div className="flex items-center gap-4">
