@@ -39,9 +39,14 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-tundora/20 flex flex-col md:flex-row justify-between items-center text-xs text-tundora uppercase tracking-widest">
+            <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-tundora/20 flex flex-col md:flex-row justify-between items-center text-xs text-tundora uppercase tracking-widest gap-4 md:gap-0">
                 <p>&copy; {new Date().getFullYear()} ZRK Group. All rights reserved.</p>
-                <p className="mt-4 md:mt-0">Industrial Minimalism Edition</p>
+                <div className="flex items-center gap-3 bg-zrk-black/30 px-4 py-2 rounded-full border border-tundora/20">
+                    <p className="mt-0.5">PROTOTYPE BY MYK STUDIO</p>
+                    <a href="https://mykstudio.com" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="/assets/images/myk-logo.webp" alt="MYK Studio" className="h-6 w-auto" />
+                    </a>
+                </div>
             </div>
         </footer>
     );
