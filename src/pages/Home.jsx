@@ -12,7 +12,7 @@ const Home = () => {
             <section className="px-6 py-12 max-w-7xl mx-auto">
                 <MotionWrapper yOffset={30}>
                     <div className="mb-8 relative z-10">
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold uppercase tracking-tighter text-industrial-dark dark:text-industrial-light leading-[0.9]">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold uppercase tracking-tighter text-industrial-dark dark:text-industrial-light leading-[1.1]">
                             <StaggeredText text="High-Quality MDF" />
                             <br />
                             <StaggeredText text="& Laminated Boards" className="text-zrk-gold" delayOffset={0.2} />
