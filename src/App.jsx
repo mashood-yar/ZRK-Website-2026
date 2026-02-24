@@ -10,6 +10,7 @@ const Products = lazy(() => import('./pages/Products'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const DesignStudio = lazy(() => import('./pages/DesignStudio'));
+const E1Standards = lazy(() => import('./pages/E1Standards'));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/products" element={<PageTransition><Products /></PageTransition>} />
         <Route path="/designstudio" element={<PageTransition><DesignStudio /></PageTransition>} />
+        <Route path="/e1" element={<PageTransition><E1Standards /></PageTransition>} />
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
