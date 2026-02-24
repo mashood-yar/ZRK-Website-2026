@@ -48,9 +48,25 @@ const Contact = () => {
                             </p>
                         </MotionWrapper>
                         <MotionWrapper delay={0.2} yOffset={20}>
-                            <h3 className="text-xs font-sans uppercase tracking-widest text-zrk-gold mb-4">Direct Lines</h3>
-                            <p className="text-lg text-industrial-dark dark:text-industrial-light font-medium">WhatsApp: +92 333 297 5975</p>
-                            <p className="text-lg text-industrial-dark dark:text-industrial-light font-medium">Email: info@zrkgroup.com</p>
+                            <h3 className="text-xs font-sans uppercase tracking-widest text-zrk-gold mb-4">Official Channels</h3>
+                            <div className="space-y-4">
+                                <div>
+                                    <span className="block text-xs font-sans uppercase tracking-widest text-tundora dark:text-gray-500 mb-1">Sales</span>
+                                    <a href="mailto:sales@zrkgroup.com" className="text-lg text-industrial-dark dark:text-industrial-light font-medium hover:text-zrk-gold transition-colors">sales@zrkgroup.com</a>
+                                </div>
+                                <div>
+                                    <span className="block text-xs font-sans uppercase tracking-widest text-tundora dark:text-gray-500 mb-1">Export Inquiries</span>
+                                    <a href="mailto:info@zrkgroup.com" className="text-lg text-industrial-dark dark:text-industrial-light font-medium hover:text-zrk-gold transition-colors">info@zrkgroup.com</a>
+                                </div>
+                                <div>
+                                    <span className="block text-xs font-sans uppercase tracking-widest text-tundora dark:text-gray-500 mb-1">Career</span>
+                                    <a href="mailto:hr@zrkgroup.com" className="text-lg text-industrial-dark dark:text-industrial-light font-medium hover:text-zrk-gold transition-colors">hr@zrkgroup.com</a>
+                                </div>
+                                <div>
+                                    <span className="block text-xs font-sans uppercase tracking-widest text-tundora dark:text-gray-500 mb-1">Complaints</span>
+                                    <a href="mailto:complaints@zrkgroup.com" className="text-lg text-industrial-dark dark:text-industrial-light font-medium hover:text-zrk-gold transition-colors">complaints@zrkgroup.com</a>
+                                </div>
+                            </div>
                         </MotionWrapper>
                     </div>
 
