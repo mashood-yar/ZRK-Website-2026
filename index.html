@@ -1,13 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=1280" />
-    <title>zrk-final-website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" id="viewport-meta" content="width=1280" />
+  <script>
+    if (screen.width < 1280) {
+      var scale = screen.width / 1280;
+      document.getElementById('viewport-meta').setAttribute('content', 'width=1280, initial-scale=' + scale);
+    }
+  </script>
+  <title>zrk-final-website</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
