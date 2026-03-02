@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             <main className="flex-grow w-full mt-20 relative z-10">
                 {children}
             </main>
-            <div className="text-white text-5xl z-[9999] relative">TEST_FOOTER_BLEED</div>
+            <Footer />
         </div>
     );
 };
