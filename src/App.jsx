@@ -19,14 +19,14 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-        <Route path="/products" element={<PageTransition><Products /></PageTransition>} />
-        <Route path="/designstudio" element={<PageTransition><DesignStudio /></PageTransition>} />
-        <Route path="/catalogues" element={<PageTransition><Catalogues /></PageTransition>} />
-        <Route path="/e1" element={<PageTransition><E1Standards /></PageTransition>} />
-        <Route path="/sustainability" element={<PageTransition><Sustainability /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/designstudio" element={<DesignStudio />} />
+        <Route path="/catalogues" element={<Catalogues />} />
+        <Route path="/e1" element={<E1Standards />} />
+        <Route path="/sustainability" element={<Sustainability />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
   );
