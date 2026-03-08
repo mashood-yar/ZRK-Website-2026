@@ -1,23 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 /**
  * Typographic stagger effect. Reveals text word-by-word with brutalist precision.
- * FIX: Uses lazy useState initializer for isMobile to avoid flash on first render.
+ * 
+ * FIX: Changed from whileInView to useInView hook + animate.
+ * whileInView was failing for top-of-page elements already in viewport on
+ * initial load (framer-motion v12 IntersectionObserver timing issue).
+ * useInView fires reliably on mount for both in-view and scroll-in elements.
  */
 const StaggeredText = ({ text, className = "", delayOffset = 0 }) => {
-    // Lazy initializer runs synchronously on first render — no useEffect flash
-    const [isMobile] = React.useState(
+    const ref = useRef(null);
+    // once: true means the animation only plays once (not reversed on scroll out)
+    const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+    // Detect mobile/touch to skip animations
+    const isMobile = React.useMemo(
         () => typeof window !== 'undefined' && (
             window.matchMedia("(max-width: 768px)").matches ||
             window.matchMedia("(pointer: coarse)").matches
-        )
+        ),
+        []
     );
 
     const words = text.split(" ");
 
     return (
-        <span className={`inline-flex flex-wrap ${className}`}>
+        <span ref={ref} className={`inline-flex flex-wrap ${className}`}>
             {words.map((word, i) => (
                 <span key={i} className="overflow-hidden mr-[0.25em]">
                     {isMobile ? (
@@ -26,8 +35,7 @@ const StaggeredText = ({ text, className = "", delayOffset = 0 }) => {
                         <motion.span
                             className="inline-block"
                             initial={{ y: "100%", opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true, amount: 0.1 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: "100%", opacity: 0 }}
                             transition={{
                                 duration: 0.6,
                                 delay: delayOffset + i * 0.05,
