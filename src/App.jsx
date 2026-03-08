@@ -19,14 +19,14 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/designstudio" element={<DesignStudio />} />
-        <Route path="/catalogues" element={<Catalogues />} />
-        <Route path="/e1" element={<E1Standards />} />
-        <Route path="/sustainability" element={<Sustainability />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Suspense fallback={null}><Home /></Suspense>} />
+        <Route path="/products" element={<Suspense fallback={null}><Products /></Suspense>} />
+        <Route path="/designstudio" element={<Suspense fallback={null}><DesignStudio /></Suspense>} />
+        <Route path="/catalogues" element={<Suspense fallback={null}><Catalogues /></Suspense>} />
+        <Route path="/e1" element={<Suspense fallback={null}><E1Standards /></Suspense>} />
+        <Route path="/sustainability" element={<Suspense fallback={null}><Sustainability /></Suspense>} />
+        <Route path="/about" element={<Suspense fallback={null}><About /></Suspense>} />
+        <Route path="/contact" element={<Suspense fallback={null}><Contact /></Suspense>} />
       </Routes>
     </AnimatePresence>
   );
