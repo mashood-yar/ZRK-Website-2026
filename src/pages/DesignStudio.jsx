@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+// DesignStudio page
 import { MapPin, ArrowUpRight } from 'lucide-react';
 import StaggeredText from '../components/StaggeredText';
 import ImageContainer from '../components/ImageContainer';
@@ -6,7 +6,7 @@ import MotionWrapper from '../components/MotionWrapper';
 
 export default function DesignStudio() {
     return (
-        <div className="pt-24 min-h-screen bg-[var(--bg-color)]">
+        <div className="min-h-screen bg-[var(--bg-color)]">
 
             {/* Header Section */}
             <section className="py-24 px-4 md:px-8 border-b border-tundora/20">

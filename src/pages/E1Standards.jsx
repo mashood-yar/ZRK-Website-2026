@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+// E1Standards page — no state needed, uses MotionWrapper component for animations
 import MotionWrapper from '../components/MotionWrapper';
 import StaggeredText from '../components/StaggeredText';
 
@@ -20,7 +20,7 @@ export default function E1Standards() {
     ];
 
     return (
-        <div className="pt-24 min-h-screen bg-[var(--bg-color)]">
+        <div className="min-h-screen bg-[var(--bg-color)]">
             {/* Header */}
             <section className="py-24 px-4 md:px-8 border-b border-tundora/20">
                 <div className="max-w-4xl mx-auto text-center">
@@ -62,9 +62,9 @@ export default function E1Standards() {
             </section>
 
             {/* Health Effects Section */}
-            <section className="py-16 md:py-24 px-4 md:px-8 bg-industrial-dark text-industrial-light max-w-7xl mx-auto mb-24 relative overflow-hidden group border border-tundora/20 shadow-xl">
+            <section className="py-16 md:py-24 w-full bg-industrial-dark text-industrial-light mb-24 relative overflow-hidden group border-y border-tundora/20 shadow-xl">
                 <div className="absolute inset-0 bg-zrk-gold/5 pointer-events-none transition-colors duration-700 group-hover:bg-zrk-gold/10"></div>
-                <div className="relative z-10">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
                     <MotionWrapper yOffset={30}>
                         <div className="max-w-3xl mb-16">
                             <h2 className="font-sans font-bold text-3xl md:text-5xl mb-6 uppercase tracking-tight text-zrk-gold">

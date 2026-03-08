@@ -10,7 +10,7 @@ const ScrollProgress = () => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-1 lg:w-2 h-screen z-50 origin-top bg-zrk-gold mix-blend-difference"
+            className="fixed top-0 left-0 w-1 lg:w-2 h-screen z-50 origin-top bg-zrk-gold mix-blend-difference hidden md:block"
             style={{ scaleY: scrollYProgress }}
         />
     );

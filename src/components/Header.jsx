@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +13,11 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Close mobile menu whenever the route changes
     useEffect(() => {
-        setIsOpen(false);
-    }, [location]);
+        if (isOpen) setIsOpen(false);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location.pathname]);
 
     return (
         <>
@@ -60,9 +61,9 @@ const Header = () => {
 
             {/* Mobile Nav Overlay */}
             <div
-                className={`lg:hidden fixed inset-0 z-40 bg-industrial-light/95 dark:bg-industrial-dark/95 backdrop-blur-xl transition-transform duration-MAX ease-industrial ${isOpen ? 'translate-y-0' : '-translate-y-full'
-                    }`}
-                style={{ paddingTop: '80px' }}
+                className={`lg:hidden fixed inset-0 z-40 bg-industrial-light/95 dark:bg-industrial-dark/95 backdrop-blur-xl transition-transform duration-[400ms] ease-industrial ${isOpen ? 'translate-y-0' : '-translate-y-full'
+                    } overflow-hidden`}
+                style={{ paddingTop: '80px', willChange: 'transform' }}
             >
                 <nav className="flex flex-col items-center justify-center h-full gap-8 text-2xl font-sans tracking-tighter uppercase font-bold text-industrial-dark dark:text-industrial-light">
                     {['/', '/products', '/designstudio', '/catalogues', '/e1', '/sustainability', '/about', '/contact'].map((path) => {

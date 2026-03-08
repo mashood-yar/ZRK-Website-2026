@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
-import PageTransition from './components/PageTransition';
 
 // Lazy load pages for performance
 const Home = lazy(() => import('./pages/Home'));

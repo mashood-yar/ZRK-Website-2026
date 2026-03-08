@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import MotionWrapper from '../components/MotionWrapper';
 import ImageContainer from '../components/ImageContainer';
 import StaggeredText from '../components/StaggeredText';
@@ -23,7 +22,7 @@ export default function Catalogues() {
     ];
 
     return (
-        <div className="pt-24 min-h-screen bg-[var(--bg-color)]">
+        <div className="min-h-screen bg-[var(--bg-color)]">
             {/* Header */}
             <section className="py-24 px-4 md:px-8 border-b border-tundora/20">
                 <div className="max-w-4xl mx-auto text-center">

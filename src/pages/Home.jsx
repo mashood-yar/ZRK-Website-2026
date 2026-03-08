@@ -31,7 +31,7 @@ const CinematicSlider = () => {
 
     return (
         <div className="relative w-full overflow-hidden rounded filter grayscale-[15%] grid items-center justify-center bg-transparent">
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 <motion.div
                     key={current}
                     initial={{ opacity: 0 }}
@@ -118,9 +118,9 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
                         {[
-                            { id: 1, name: "Furniture and Interior", src: "/assets/images/residential-kitchen.png", desc: "Premium quality for enduring spaces" },
-                            { id: 2, name: "Wall Panel", src: "/assets/images/hotel-lobby.png", desc: "Aesthetic and durable interior solutions" },
-                            { id: 3, name: "Door Skins", src: "/assets/images/corporate-boardroom.png", desc: "Engineered excellence for doors" }
+                            { id: 1, name: "Furniture and Interior", src: "/assets/kitchen.webp", desc: "Premium quality for enduring spaces" },
+                            { id: 2, name: "Wall Panel", src: "/assets/lobby.webp", desc: "Aesthetic and durable interior solutions" },
+                            { id: 3, name: "Door Skins", src: "/assets/boardroom.webp", desc: "Engineered excellence for doors" }
                         ].map((product, idx) => (
                             <MotionWrapper key={product.id} delay={0.1 * idx} yOffset={30}>
                                 <Link to="/products" className="block group">
@@ -171,7 +171,7 @@ const Home = () => {
                             <div className="relative group overflow-hidden">
                                 <div className="transform group-hover:scale-[1.02] transition-transform duration-MAX ease-industrial">
                                     <img
-                                        src="/assets/images/dark-walnut.png"
+                                        src="/assets/dark-walnut.webp"
                                         alt="E1 European Standards - Dark Walnut"
                                         className="w-auto h-auto max-w-full block mx-auto"
                                     />

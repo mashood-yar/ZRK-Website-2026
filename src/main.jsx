@@ -2,6 +2,7 @@ import { StrictMode, Component } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+// NOTE: App.css intentionally NOT imported — it contains Vite default CSS that breaks layouts.
 
 class ErrorBoundary extends Component {
   constructor(props) {

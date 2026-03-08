@@ -34,18 +34,20 @@ const Products = () => {
 
     return (
         <div className="w-full">
-            {/* Product Hero */}
-            <section className="px-6 py-20 bg-industrial-dark text-industrial-light max-w-7xl mx-auto mt-8">
-                <MotionWrapper yOffset={30}>
-                    <h1 className="text-5xl md:text-8xl font-sans font-bold uppercase tracking-tighter mb-6 relative">
-                        <StaggeredText text="Material" />
-                        <br />
-                        <span className="text-zrk-gold">Library.</span>
-                    </h1>
-                    <p className="max-w-2xl text-lg font-medium text-gray-400">
-                        Discover ZRK Group's premium MDF and laminated boards in Pakistan. Ideal for furniture and interior design, our products combine quality and durability.
-                    </p>
-                </MotionWrapper>
+            {/* Product Hero - full-width dark background, content constrained inside */}
+            <section className="w-full bg-industrial-dark text-industrial-light">
+                <div className="px-6 py-20 max-w-7xl mx-auto mt-8">
+                    <MotionWrapper yOffset={30}>
+                        <h1 className="text-5xl md:text-8xl font-sans font-bold uppercase tracking-tighter mb-6 relative">
+                            <StaggeredText text="Material" />
+                            <br />
+                            <span className="text-zrk-gold">Library.</span>
+                        </h1>
+                        <p className="max-w-2xl text-lg font-medium text-gray-400">
+                            Discover ZRK Group's premium MDF and laminated boards in Pakistan. Ideal for furniture and interior design, our products combine quality and durability.
+                        </p>
+                    </MotionWrapper>
+                </div>
             </section>
 
             {/* Grid */}
@@ -97,7 +99,7 @@ const Products = () => {
                     <MotionWrapper yOffset={30}>
                         <div className="transform group-hover:scale-[0.98] transition-transform duration-MAX ease-industrial overflow-hidden border border-tundora/20">
                             <ImageContainer
-                                src="/assets/images/sample-box.png"
+                                src="/assets/sample-box.webp"
                                 alt="Architectural Sample Box"
                                 aspectType="catalog"
                                 parallaxOffset={10}

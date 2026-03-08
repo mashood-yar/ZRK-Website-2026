@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 /**
- * Container that enforces exact aspect ratios and adds Awwwards-level parallax
- * without violating the "no floaty animation" constraints.
- * aspectType: 'hero' | 'product' | 'application' | 'sample' | 'catalog'
+ * Container that enforces exact aspect ratios and adds parallax effect.
+ * FIX: Added 'square' to the aspectClasses map — was previously falling back
+ * to 'aspect-video' which incorrectly rendered square images in 16:9.
  */
 const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', parallaxOffset = 50, priority = false }) => {
     const containerRef = useRef(null);
@@ -13,7 +13,6 @@ const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', paralla
         offset: ["start end", "end start"]
     });
 
-    // Calculate strict Y transform mapping to scrolling
     const yBase = useTransform(scrollYProgress, [0, 1], [-parallaxOffset, parallaxOffset]);
 
     const aspectClasses = {
@@ -22,6 +21,7 @@ const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', paralla
         'application': 'aspect-application',
         'sample': 'aspect-sample',
         'catalog': 'aspect-catalog',
+        'square': 'aspect-square',  // FIX: was missing — caused square images to render at 16:9
     };
 
     const ratioClass = aspectClasses[aspectType] || 'aspect-video';
@@ -33,14 +33,13 @@ const ImageContainer = ({ src, alt, aspectType = '16/9', className = '', paralla
             <motion.img
                 src={src}
                 alt={alt}
-                // Scale to 110% minimum to ensure parallax movement doesn't show background clipping
                 style={{ y: yBase, scale: 1.15 }}
                 className="absolute inset-0 w-full h-full object-cover origin-center"
                 loading={priority ? "eager" : "lazy"}
                 fetchPriority={priority ? "high" : "auto"}
             />
 
-            {/* Monolithic Slide Reveal Mask over the image */}
+            {/* Monolithic Slide Reveal Mask */}
             <motion.div
                 className="absolute inset-0 bg-industrial-light dark:bg-industrial-dark z-10 origin-bottom"
                 initial={{ scaleY: 1 }}

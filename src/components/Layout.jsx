@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
     }, [pathname]);
 
     return (
-        <div className="flex flex-col min-h-screen selection:bg-zrk-gold selection:text-white bg-industrial-light dark:bg-industrial-dark w-full cursor-none relative">
+        <div className="flex flex-col min-h-screen selection:bg-zrk-gold selection:text-white bg-industrial-light dark:bg-industrial-dark w-full md:cursor-none relative">
             <CustomCursor />
             <ScrollProgress />
             <Header />

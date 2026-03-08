@@ -3,17 +3,16 @@ import { motion } from 'framer-motion';
 
 /**
  * Typographic stagger effect. Reveals text word-by-word with brutalist precision.
- * Adheres to the 0.22, 1, 0.36, 1 curve and transform/opacity rule.
+ * FIX: Uses lazy useState initializer for isMobile to avoid flash on first render.
  */
 const StaggeredText = ({ text, className = "", delayOffset = 0 }) => {
-    const [isMobile, setIsMobile] = React.useState(false);
-
-    React.useEffect(() => {
-        const checkMobile = () => setIsMobile(window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(pointer: coarse)").matches);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    // Lazy initializer runs synchronously on first render — no useEffect flash
+    const [isMobile] = React.useState(
+        () => typeof window !== 'undefined' && (
+            window.matchMedia("(max-width: 768px)").matches ||
+            window.matchMedia("(pointer: coarse)").matches
+        )
+    );
 
     const words = text.split(" ");
 

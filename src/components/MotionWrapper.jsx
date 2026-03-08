@@ -2,22 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 /**
- * Ensures strict adherence to the application's animation rules:
- * - Transform + opacity only.
- * - Max 600ms duration.
- * - Cubic-bezier(0.22, 1, 0.36, 1) timing function.
- * - NO floaty animations.
+ * Ensures strict adherence to the application's animation rules.
+ * FIX: Uses lazy useState initializer for isMobile to avoid flash on first render.
  */
 const MotionWrapper = ({ children, className = '', delay = 0, yOffset = 20 }) => {
-    const [isMobile, setIsMobile] = React.useState(false);
-
-    React.useEffect(() => {
-        // Detect mobile users to disable scroll animations that might break iOS Safari observer
-        const checkMobile = () => setIsMobile(window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(pointer: coarse)").matches);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    // Lazy initializer runs synchronously on first render — no useEffect flash
+    const [isMobile] = React.useState(
+        () => typeof window !== 'undefined' && (
+            window.matchMedia("(max-width: 768px)").matches ||
+            window.matchMedia("(pointer: coarse)").matches
+        )
+    );
 
     if (isMobile) {
         return <div className={className}>{children}</div>;
@@ -32,7 +27,7 @@ const MotionWrapper = ({ children, className = '', delay = 0, yOffset = 20 }) =>
             transition={{
                 duration: 0.6,
                 delay: delay,
-                ease: [0.22, 1, 0.36, 1], // industrial cubic-bezier
+                ease: [0.22, 1, 0.36, 1],
             }}
         >
             {children}

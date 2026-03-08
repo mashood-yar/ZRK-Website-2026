@@ -81,7 +81,7 @@ const Contact = () => {
                                         <span>Step {step} of 3</span>
                                         <span>{3 - step} Remaining</span>
                                     </div>
-                                    <div className="w-full h-1 bg-tundora/20 rounded-full overflow-hidden">
+                                    <div className="w-full h-1 bg-tundora/20 overflow-hidden" style={{ borderRadius: '2px' }}>
                                         <motion.div
                                             className="h-full bg-zrk-gold"
                                             initial={{ width: '0%' }}
@@ -101,7 +101,7 @@ const Contact = () => {
                                             animate={{ opacity: 1, scale: 1 }}
                                             className="text-center space-y-4"
                                         >
-                                            <div className="w-16 h-16 mx-auto bg-zrk-gold text-white rounded-full flex items-center justify-center mb-6">
+                                            <div className="w-16 h-16 mx-auto bg-zrk-gold text-white flex items-center justify-center mb-6" style={{ borderRadius: '50%' }}>
                                                 <Check size={32} />
                                             </div>
                                             <h3 className="text-2xl font-sans uppercase font-bold text-industrial-light dark:text-industrial-dark">Inquiry Received</h3>
