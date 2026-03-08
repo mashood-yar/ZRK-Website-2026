@@ -47,7 +47,7 @@ const CinematicSlider = () => {
                             alt={`ZRK Architectural Banner ${current + 1}`}
                             className="w-auto h-auto max-w-full block mx-auto"
                             loading={current === 0 ? "eager" : "lazy"}
-                            fetchPriority={current === 0 ? "high" : "auto"}
+                            fetchpriority={current === 0 ? "high" : "auto"}
                         />
                     </picture>
                 </motion.div>

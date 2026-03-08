@@ -16,24 +16,6 @@ const Layout = ({ children }) => {
         window.scrollTo(0, 0);
     }, [pathname]);
 
-    useEffect(() => {
-        setTimeout(() => {
-            const els = Array.from(document.querySelectorAll('*')).filter(e => e.textContent === 'CONTACT' && e.children.length === 0);
-            if (els.length > 0) {
-                const el = els[els.length - 1];
-                let path = el.tagName;
-                let curr = el.parentElement;
-                while (curr) {
-                    path = curr.tagName + '.' + Array.from(curr.classList).join('.') + ' > ' + path;
-                    curr = curr.parentElement;
-                }
-                console.log('CONTACT NODE PATH:', path, 'CLASSES:', el.className);
-            } else {
-                console.log('CONTACT NODE NOT FOUND');
-            }
-        }, 3000);
-    }, []);
-
     return (
         <div className="flex flex-col min-h-screen selection:bg-zrk-gold selection:text-white bg-industrial-light dark:bg-industrial-dark w-full overflow-x-hidden cursor-none relative">
             <CustomCursor />

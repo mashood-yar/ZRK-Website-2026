@@ -6,13 +6,6 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    screens: {
-      'sm': '0px',
-      'md': '0px',
-      'lg': '0px',
-      'xl': '0px',
-      '2xl': '0px',
-    },
     extend: {
       colors: {
         tundora: '#404040',

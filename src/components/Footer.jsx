@@ -20,7 +20,7 @@ const Footer = () => {
                         <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
                         <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
                         <li><Link to="/sustainability" className="hover:text-white transition-colors">Sustainability</Link></li>
-                        {/* <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li> */}
+                        <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                     </ul>
                 </div>
 
@@ -32,11 +32,11 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* <div>
+                <div>
                     <h4 className="font-sans uppercase tracking-widest text-xs mb-6 text-zrk-gold">Contact</h4>
                     <p className="text-sm text-tundora mb-2">info@zrkgroup.com</p>
                     <p className="text-sm text-tundora">WhatsApp: +92 333 297 5975</p>
-                </div> */}
+                </div>
             </div>
 
             <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-tundora/20 flex flex-col md:flex-row justify-between items-center text-xs text-tundora uppercase tracking-widest gap-4 md:gap-0">

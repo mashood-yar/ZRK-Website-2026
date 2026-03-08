@@ -20,8 +20,7 @@
   }
 
   body {
-    @apply bg-[var(--bg-color)] text-[var(--text-color)] font-body antialiased selection:bg-zrk-gold selection:text-white transition-colors duration-300 relative;
-    overflow-x: hidden;
+    @apply bg-[var(--bg-color)] text-[var(--text-color)] font-body antialiased selection:bg-zrk-gold selection:text-white transition-colors duration-300;
   }
 
   h1,

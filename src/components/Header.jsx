@@ -39,31 +39,29 @@ const Header = () => {
                     </button>
 
                     {/* Desktop Nav */}
-                    <div className="hidden xl:block">
-                        <nav className="flex gap-6 2xl:gap-8 text-sm font-medium tracking-wide uppercase relative">
-                            {['/', '/products', '/designstudio', '/catalogues', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
-                                const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : (path === '/catalogues' ? 'Catalogues' : path.substring(1)))));
-                                const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
+                    <nav className="hidden xl:flex gap-6 2xl:gap-8 text-sm font-medium tracking-wide uppercase relative">
+                        {['/', '/products', '/designstudio', '/catalogues', '/e1', '/sustainability', '/about', '/contact'].map((path) => {
+                            const label = path === '/' ? 'Home' : (path === '/designstudio' ? 'Design Studio' : (path === '/e1' ? 'E1 Standards' : (path === '/sustainability' ? 'Sustainability' : (path === '/catalogues' ? 'Catalogues' : path.substring(1)))));
+                            const isActive = location.pathname === path || (path === '/products' && location.pathname.startsWith('/products'));
 
-                                return (
-                                    <Link
-                                        key={path}
-                                        to={path}
-                                        className={`relative hover:text-zrk-gold transition-colors duration-200 py-2 ${isActive ? 'text-zrk-gold' : 'text-industrial-dark dark:text-industrial-light'}`}
-                                    >
-                                        {label}
-                                        {isActive && (
-                                            <motion.div
-                                                layoutId="activeNavIndicator"
-                                                className="absolute -bottom-1 left-0 right-0 h-[2px] bg-zrk-gold"
-                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                            />
-                                        )}
-                                    </Link>
-                                );
-                            })}
-                        </nav>
-                    </div>
+                            return (
+                                <Link
+                                    key={path}
+                                    to={path}
+                                    className={`relative hover:text-zrk-gold transition-colors duration-200 py-2 ${isActive ? 'text-zrk-gold' : 'text-industrial-dark dark:text-industrial-light'}`}
+                                >
+                                    {label}
+                                    {isActive && (
+                                        <motion.div
+                                            layoutId="activeNavIndicator"
+                                            className="absolute -bottom-1 left-0 right-0 h-[2px] bg-zrk-gold"
+                                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
+                    </nav>
                 </div>
             </header>
 
