@@ -36,14 +36,14 @@ const Products = () => {
         <div className="w-full">
             {/* Product Hero - full-width dark background, content constrained inside */}
             <section className="w-full bg-industrial-dark text-industrial-light">
-                <div className="px-6 py-20 max-w-7xl mx-auto mt-8">
+                <div className="px-4 sm:px-6 py-12 sm:py-20 max-w-7xl mx-auto">
                     <MotionWrapper yOffset={30}>
-                        <h1 className="text-5xl md:text-8xl font-sans font-bold uppercase tracking-tighter mb-6 relative">
+                        <h1 className="text-4xl sm:text-5xl md:text-8xl font-sans font-bold uppercase tracking-tighter mb-6 relative">
                             <StaggeredText text="Material" />
                             <br />
                             <span className="text-zrk-gold">Library.</span>
                         </h1>
-                        <p className="max-w-2xl text-lg font-medium text-gray-400">
+                        <p className="max-w-2xl text-base sm:text-lg font-medium text-gray-400">
                             Discover ZRK Group's premium MDF and laminated boards in Pakistan. Ideal for furniture and interior design, our products combine quality and durability.
                         </p>
                     </MotionWrapper>
@@ -51,7 +51,7 @@ const Products = () => {
             </section>
 
             {/* Grid */}
-            <section className="px-6 py-24 max-w-7xl mx-auto">
+            <section className="px-4 sm:px-6 py-12 sm:py-20 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {products.map((product, idx) => (
                         <MotionWrapper key={product.id} delay={0.05 * (idx % 4)} yOffset={30}>
@@ -83,7 +83,7 @@ const Products = () => {
                                         </h3>
                                         <p className="text-sm text-tundora dark:text-gray-400 max-w-sm line-clamp-2">{product.desc}</p>
                                     </div>
-                                    <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-zinc-800 flex items-center justify-center group-hover:border-zrk-gold group-hover:bg-zrk-gold group-hover:text-white transition-all duration-300 text-tundora ml-4 shrink-0">
+                                    <div className="w-10 h-10 border border-gray-200 dark:border-zinc-800 flex items-center justify-center group-hover:border-zrk-gold group-hover:bg-zrk-gold group-hover:text-white transition-all duration-300 text-tundora ml-4 shrink-0" style={{ borderRadius: '50%' }}>
                                         <ArrowDown size={18} className="transform -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ const Products = () => {
             </section>
 
             {/* Sample Box / Catalog CTA */}
-            <section className="px-6 py-24 bg-industrial-light dark:bg-industrial-dark max-w-7xl mx-auto group border-t border-tundora/20">
+            <section className="px-4 sm:px-6 py-12 sm:py-24 max-w-7xl mx-auto group border-t border-tundora/20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <MotionWrapper yOffset={30}>
                         <div className="transform group-hover:scale-[0.98] transition-transform duration-MAX ease-industrial overflow-hidden border border-tundora/20">

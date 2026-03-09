@@ -6,7 +6,7 @@ import StaggeredText from '../components/StaggeredText';
 const About = () => {
     return (
         <div className="w-full">
-            <section className="px-6 py-24 max-w-7xl mx-auto">
+            <section className="px-4 sm:px-6 py-12 sm:py-24 max-w-7xl mx-auto">
                 <MotionWrapper yOffset={30}>
                     <h1 className="text-5xl md:text-8xl font-sans font-bold uppercase tracking-tighter mb-12 text-industrial-dark dark:text-industrial-light leading-[0.9]">
                         <StaggeredText text="The Backbone" />
@@ -45,8 +45,8 @@ const About = () => {
             </section>
 
             {/* Core Values: Vision, Philosophy, Compliance */}
-            <section className="px-6 py-24 max-w-7xl mx-auto border-t border-tundora/20">
-                <div className="space-y-32">
+            <section className="px-4 sm:px-6 py-12 sm:py-24 max-w-7xl mx-auto border-t border-tundora/20">
+                <div className="space-y-16 md:space-y-24">
                     {/* Vision */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <MotionWrapper yOffset={30} className="order-2 lg:order-1">
@@ -109,12 +109,12 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="px-6 py-24 bg-industrial-dark text-industrial-light">
+            <section className="px-4 sm:px-6 py-12 sm:py-20 bg-industrial-dark text-industrial-light">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                     <MotionWrapper delay={0}>
                         <div className="structural-panel bg-zinc-900 border-zinc-800 text-center h-full flex flex-col justify-center transform hover:-translate-y-2 transition-transform duration-500">
                             <div className="text-6xl md:text-8xl font-sans font-bold text-zrk-gold mb-6 relative inline-block">
-                                <span className="relative z-10"><StaggeredText text="M1" /></span>
+                                <span className="relative z-10"><StaggeredText text="1M+" /></span>
                             </div>
                             <div className="text-sm uppercase tracking-widest font-bold text-gray-300">Square Meters Daily</div>
                         </div>

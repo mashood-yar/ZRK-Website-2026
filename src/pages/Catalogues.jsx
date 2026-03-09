@@ -24,7 +24,7 @@ export default function Catalogues() {
     return (
         <div className="min-h-screen bg-[var(--bg-color)]">
             {/* Header */}
-            <section className="py-24 px-4 md:px-8 border-b border-tundora/20">
+            <section className="py-12 sm:py-20 px-4 md:px-8 border-b border-tundora/20">
                 <div className="max-w-4xl mx-auto text-center">
                     <MotionWrapper yOffset={30}>
                         <h1 className="font-sans font-bold text-5xl md:text-7xl text-industrial-dark dark:text-industrial-light mb-8 uppercase tracking-tight leading-[0.9]">
@@ -41,7 +41,7 @@ export default function Catalogues() {
             </section>
 
             {/* Catalogue Grid */}
-            <section className="py-24 px-4 md:px-8 max-w-[1400px] mx-auto">
+            <section className="py-12 sm:py-16 px-4 md:px-8 max-w-[1400px] mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                     {catalogues.map((cat, idx) => (
                         <MotionWrapper key={cat.id} delay={0.05 * (idx % 5)} yOffset={30}>
@@ -66,7 +66,7 @@ export default function Catalogues() {
 
                                         {/* Overlay Hover Effect */}
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                                            <div className="bg-zrk-gold text-white p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl">
+                                            <div className="bg-zrk-gold text-white p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl" style={{ borderRadius: '50%' }}>
                                                 <Download size={24} />
                                             </div>
                                         </div>

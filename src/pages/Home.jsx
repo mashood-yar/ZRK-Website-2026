@@ -74,10 +74,10 @@ const Home = () => {
     return (
         <div className="w-full">
             {/* Hero Section */}
-            <section className="px-6 py-12 max-w-7xl mx-auto">
+            <section className="px-4 sm:px-6 pt-6 pb-8 sm:pb-12 max-w-7xl mx-auto">
                 <MotionWrapper yOffset={30}>
-                    <div className="mb-8 relative z-10">
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold uppercase tracking-tighter text-industrial-dark dark:text-industrial-light leading-[1.1]">
+                    <div className="mb-6 sm:mb-8 relative z-10">
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold uppercase tracking-tighter text-industrial-dark dark:text-industrial-light leading-[1.05] sm:leading-[1.1]">
                             <StaggeredText text="High-Quality MDF" />
                             <br />
                             <StaggeredText text="& Laminated Boards" className="text-zrk-gold" delayOffset={0.2} />
@@ -86,14 +86,14 @@ const Home = () => {
                 </MotionWrapper>
 
                 <MotionWrapper delay={0.2} yOffset={40}>
-                    <div className="relative group -mt-10 lg:-mt-20 z-0">
+                    <div className="relative group z-0">
                         <CinematicSlider />
                     </div>
                 </MotionWrapper>
 
                 <MotionWrapper delay={0.4} yOffset={20}>
-                    <div className="mt-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-b border-tundora/20 pb-8">
-                        <p className="max-w-xl text-lg font-medium text-tundora dark:text-gray-400 leading-relaxed">
+                    <div className="mt-6 sm:mt-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-8 border-b border-tundora/20 pb-6 sm:pb-8">
+                        <p className="max-w-xl text-base sm:text-lg font-medium text-tundora dark:text-gray-400 leading-relaxed">
                             Discover ZRK Group's premium MDF and laminated boards in Pakistan. Ideal for furniture and interior design, our products combine quality and durability.
                         </p>
                         <Link
@@ -108,7 +108,7 @@ const Home = () => {
             </section>
 
             {/* Featured Products */}
-            <section className="px-6 py-24 bg-industrial-dark text-industrial-light overflow-hidden">
+            <section className="px-4 sm:px-6 py-16 sm:py-24 bg-industrial-dark text-industrial-light overflow-hidden">
                 <div className="max-w-7xl mx-auto">
                     <MotionWrapper yOffset={30}>
                         <h2 className="text-3xl md:text-5xl font-sans font-bold uppercase tracking-tighter mb-16">
@@ -146,7 +146,7 @@ const Home = () => {
             </section>
 
             {/* Applications Gallery Showcase */}
-            <section className="px-6 py-24 max-w-7xl mx-auto">
+            <section className="px-4 sm:px-6 py-16 sm:py-24 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div className="lg:col-span-5 order-2 lg:order-1">
                         <MotionWrapper yOffset={30}>
@@ -183,7 +183,7 @@ const Home = () => {
             </section>
 
             {/* Global Connectivity / Final CTA - Peak End Rule */}
-            <section className="px-6 py-32 bg-industrial-light dark:bg-industrial-dark relative overflow-hidden group border-t border-tundora/20">
+            <section className="px-4 sm:px-6 py-16 sm:py-24 bg-industrial-light dark:bg-industrial-dark relative overflow-hidden group border-t border-tundora/20">
                 <div className="absolute inset-0 bg-zrk-gold/5 pointer-events-none transition-colors duration-700 group-hover:bg-zrk-gold/10"></div>
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <MotionWrapper yOffset={30}>

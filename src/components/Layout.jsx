@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
             <CustomCursor />
             <ScrollProgress />
             <Header />
-            <main className="flex-grow w-full mt-20 relative z-10">
+            <main className="flex-grow w-full mt-16 sm:mt-20 relative z-10">
                 {children}
             </main>
             <Footer />

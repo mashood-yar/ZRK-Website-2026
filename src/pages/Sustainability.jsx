@@ -48,10 +48,10 @@ export default function Sustainability() {
     return (
         <div className="min-h-screen bg-[var(--bg-color)]">
             {/* Header */}
-            <section className="py-24 px-4 md:px-8 border-b border-tundora/20">
+            <section className="py-12 sm:py-20 px-4 md:px-8 border-b border-tundora/20">
                 <div className="max-w-5xl mx-auto text-center">
                     <MotionWrapper yOffset={30}>
-                        <h1 className="font-sans font-bold text-5xl md:text-7xl lg:text-8xl text-industrial-dark dark:text-industrial-light mb-8 uppercase tracking-tight leading-[0.9]">
+                        <h1 className="font-sans font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-industrial-dark dark:text-industrial-light mb-6 sm:mb-8 uppercase tracking-tight leading-[0.9]">
                             <StaggeredText text="Sustainable" /> <br />
                             <StaggeredText text="Futures." className="text-zrk-gold" delayOffset={0.2} />
                         </h1>
@@ -65,7 +65,7 @@ export default function Sustainability() {
             </section>
 
             {/* Alternating Content Sections */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-24 space-y-32">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 sm:py-16 space-y-12 md:space-y-20">
                 {sections.map((section, idx) => {
                     const isEven = idx % 2 === 0;
 

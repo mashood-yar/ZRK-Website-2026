@@ -25,9 +25,9 @@ const Header = () => {
                 className={`fixed top-0 w-full z-50 transition-colors duration-MAX ease-industrial ${scrolled ? 'bg-industrial-light/90 dark:bg-industrial-dark/90 backdrop-blur-md border-b border-tundora/10 dark:border-tundora/30' : 'bg-transparent'
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between relative z-50">
                     <Link to="/" className="relative z-50 flex items-center">
-                        <img src="/assets/images/zrk-logo.png" alt="ZRK Group" className="h-8 md:h-10 w-auto dark:invert transition-all duration-300" />
+                        <img src="/assets/images/zrk-logo.png" alt="ZRK Group" className="h-7 sm:h-8 md:h-10 w-auto dark:invert transition-all duration-300" />
                     </Link>
 
                     {/* Mobile Menu Toggle */}
